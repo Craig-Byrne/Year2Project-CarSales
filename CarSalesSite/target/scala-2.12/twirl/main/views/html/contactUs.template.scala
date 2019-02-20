@@ -22,7 +22,7 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object contactUs extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
   def apply():play.twirl.api.HtmlFormat.Appendable = {
@@ -30,10 +30,9 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
       {
 
 
-Seq[Any](_display_(/*1.2*/main("Home")/*1.14*/{_display_(Seq[Any](format.raw/*1.15*/("""
-	"""),format.raw/*2.2*/("""<h1>Welcome to IrelandCarSales</h1>
-	<h3>Here you can buy used cars at a cheap price</h3>
-""")))}),format.raw/*4.2*/(""" 
+Seq[Any](_display_(/*1.2*/main("Contact us")/*1.20*/{_display_(Seq[Any](format.raw/*1.21*/("""
+	"""),format.raw/*2.2*/("""<h1>Contact us</h1>
+""")))}),format.raw/*3.2*/("""
 
 
 """))
@@ -52,11 +51,11 @@ Seq[Any](_display_(/*1.2*/main("Home")/*1.14*/{_display_(Seq[Any](format.raw/*1.
 
               /*
                   -- GENERATED --
-                  DATE: Wed Feb 20 16:11:30 GMT 2019
-                  SOURCE: /home/wdd/Documents/Year2Project-CarSales/CarSalesSite/app/views/index.scala.html
-                  HASH: 6abb3f818e4bc92761e2bfa10812c1f5ee96fd0f
-                  MATRIX: 1030->1|1050->13|1088->14|1117->17|1239->110
-                  LINES: 33->1|33->1|33->1|34->2|36->4
+                  DATE: Wed Feb 20 16:18:19 GMT 2019
+                  SOURCE: /home/wdd/Documents/Year2Project-CarSales/CarSalesSite/app/views/contactUs.scala.html
+                  HASH: 093897bb22416189456e9d735ed8963306982d9d
+                  MATRIX: 1034->1|1060->19|1098->20|1127->23|1178->45
+                  LINES: 33->1|33->1|33->1|34->2|35->3
                   -- GENERATED --
               */
           

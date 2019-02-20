@@ -20,4 +20,14 @@ public class HomeController extends Controller {
         return ok(index.render());
     }
 
+    public Result products(){
+        return ok(products.render()); 
+    }
+
+    public Result contactUs(){
+        return ok(contactUs.render()); 
+    }
+
+
+
 }
