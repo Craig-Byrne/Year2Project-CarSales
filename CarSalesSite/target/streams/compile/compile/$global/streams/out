@@ -1,10 +1,3 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Documents/Year2Project-CarSales/CarSalesSite/app/views/main.scala.html:31:15: not found: value pagename[0m
-[0m[[0m[31merror[0m] [0m[0m		    <li @if(pagename == "Home"){class="active"}><a href="/">Home</a></li>[0m
-[0m[[0m[31merror[0m] [0m[0m		            ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Documents/Year2Project-CarSales/CarSalesSite/app/views/main.scala.html:32:15: not found: value pagename[0m
-[0m[[0m[31merror[0m] [0m[0m		    <li @if(pagename == "Products"){class="active"}><a href="/products">Products</a></li>[0m
-[0m[[0m[31merror[0m] [0m[0m		            ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Documents/Year2Project-CarSales/CarSalesSite/app/views/main.scala.html:33:15: not found: value pagename[0m
-[0m[[0m[31merror[0m] [0m[0m		    <li @if(pagename == "Contact us"){class="active"}><a href="/contactUs">Contact us</a></li>[0m
-[0m[[0m[31merror[0m] [0m[0m		            ^[0m
-[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/CarOnSale.java:10:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol: class Models[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class CarOnSale extends Models {[0m

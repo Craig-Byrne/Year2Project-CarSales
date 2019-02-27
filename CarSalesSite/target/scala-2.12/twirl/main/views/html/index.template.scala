@@ -32,7 +32,7 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 
 Seq[Any](_display_(/*1.2*/main("Home")/*1.14*/{_display_(Seq[Any](format.raw/*1.15*/("""
 	"""),format.raw/*2.2*/("""<h1>Welcome to IrelandCarSales</h1>
-	<h3>Here you can buy used cars at a cheap price</h3>
+	<h3>Here you can buy second hand cars at a cheap price</h3>
 """)))}),format.raw/*4.2*/(""" 
 
 
@@ -52,10 +52,10 @@ Seq[Any](_display_(/*1.2*/main("Home")/*1.14*/{_display_(Seq[Any](format.raw/*1.
 
               /*
                   -- GENERATED --
-                  DATE: Wed Feb 20 16:11:30 GMT 2019
-                  SOURCE: /home/wdd/Documents/Year2Project-CarSales/CarSalesSite/app/views/index.scala.html
-                  HASH: 6abb3f818e4bc92761e2bfa10812c1f5ee96fd0f
-                  MATRIX: 1030->1|1050->13|1088->14|1117->17|1239->110
+                  DATE: Wed Feb 27 16:22:22 GMT 2019
+                  SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/index.scala.html
+                  HASH: 238d0637a45310913dc334041dbef6a4ab75722b
+                  MATRIX: 1030->1|1050->13|1088->14|1117->17|1246->117
                   LINES: 33->1|33->1|33->1|34->2|36->4
                   -- GENERATED --
               */

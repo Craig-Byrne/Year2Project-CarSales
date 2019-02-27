@@ -37,42 +37,50 @@ Seq[Any](_display_(/*1.2*/main("Products")/*1.18*/{_display_(Seq[Any](format.raw
 		<thead>
 			<!-- The header row-->
 			<tr>
+				<th>ID</th>
 				<th>Make</th>
 				<th>Model</th>
 				<th>Year</th>
 				<th>Fuel Type</th>
 				<th>Price</th>
+				<th>Colour</th>
 			</tr>
 		</thead>
 
 		<tbody>
 			<!-- Product rows -->
 		<tr>
+			<td>1</td>
 			<td>Volkswagen</td>
 			<td>Polo</td>
 			<td>2012</td>
 			<td>Petrol</td>
 			<td>7750</td>
+			<td>Red</td>
 		</tr>
 
 		<tr>
+			<td>2</td>
 			<td>Opel</td>
 			<td>Corsa</td>
 			<td>2010</td>
 			<td>Petrol</td>
 			<td>6450</td>
+			<td>Black</td>
 		</tr>
 
 		<tr>
+			<td>3</td>
 			<td>Renault</td>
 			<td>Clio</td>
 			<td>2014</td>
 			<td>Petrol</td>
 			<td>8800</td>
+			<td>Silver</td>
 		</tr>
 		</tbody>
 	</table>
-""")))}),format.raw/*43.2*/("""
+""")))}),format.raw/*51.2*/("""
 
 """))
       }
@@ -90,11 +98,11 @@ Seq[Any](_display_(/*1.2*/main("Products")/*1.18*/{_display_(Seq[Any](format.raw
 
               /*
                   -- GENERATED --
-                  DATE: Wed Feb 20 16:53:19 GMT 2019
-                  SOURCE: /home/wdd/Documents/Year2Project-CarSales/CarSalesSite/app/views/products.scala.html
-                  HASH: 492e46948b0ee4217551d72286dd43fc1fc0cf6b
-                  MATRIX: 1033->1|1057->17|1095->18|1124->21|1922->789
-                  LINES: 33->1|33->1|33->1|34->2|75->43
+                  DATE: Wed Feb 27 15:37:20 GMT 2019
+                  SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/products.scala.html
+                  HASH: 4c351013b6434d29737decd1e2743c1b3a7cd503
+                  MATRIX: 1033->1|1057->17|1095->18|1124->21|2061->928
+                  LINES: 33->1|33->1|33->1|34->2|83->51
                   -- GENERATED --
               */
           
