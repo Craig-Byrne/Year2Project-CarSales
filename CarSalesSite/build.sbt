@@ -2,7 +2,7 @@ name := """play-java-starter-example"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayJava, PlayEbean)
+lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
 scalaVersion := "2.12.8"
 
@@ -28,4 +28,3 @@ libraryDependencies += "org.awaitility" % "awaitility" % "3.1.3" % Test
 // Make verbose tests
 testOptions in Test := Seq(Tests.Argument(TestFrameworks.JUnit, "-a", "-v"))
 
-libraryDependencies ++= Seq(evolutions, jdbc)
