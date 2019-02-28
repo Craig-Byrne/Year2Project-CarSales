@@ -60,7 +60,7 @@ Seq[Any](format.raw/*8.1*/("""<!DOCTYPE html>
 		</div>
 		<ul class="nav navbar-nav">
 		    <li """),_display_(/*32.12*/if(title == "Home")/*32.31*/{_display_(Seq[Any](format.raw/*32.32*/("""class="active"""")))}),format.raw/*32.47*/("""><a href=""""),_display_(/*32.58*/routes/*32.64*/.HomeController.index()),format.raw/*32.87*/("""">Home</a></li>
-		    <li """),_display_(/*33.12*/if(title == "Products")/*33.35*/{_display_(Seq[Any](format.raw/*33.36*/("""class="active"""")))}),format.raw/*33.51*/("""><a href=""""),_display_(/*33.62*/routes/*33.68*/.HomeController.products()),format.raw/*33.94*/("""">Products</a></li>
+		    <li """),_display_(/*33.12*/if(title == "Cars on Sale")/*33.39*/{_display_(Seq[Any](format.raw/*33.40*/("""class="active"""")))}),format.raw/*33.55*/("""><a href=""""),_display_(/*33.66*/routes/*33.72*/.HomeController.products()),format.raw/*33.98*/("""">Cars on Sale</a></li>
 		    <li """),_display_(/*34.12*/if(title == "Contact us")/*34.37*/{_display_(Seq[Any](format.raw/*34.38*/("""class="active"""")))}),format.raw/*34.53*/("""><a href=""""),_display_(/*34.64*/routes/*34.70*/.HomeController.contactUs()),format.raw/*34.97*/("""">Contact us</a></li>
 		</ul>
 	    </div>
@@ -71,8 +71,8 @@ Seq[Any](format.raw/*8.1*/("""<!DOCTYPE html>
 		<div class="col-sm-3">
 		    <div class="well sidecol">
 			<h2>News</h2>
-			<h3>New product sub-category</h3>
-			<p>Following the sudden and unprecedented volumes of trade in fashion paper bags, our <span class="redtext">bags</span> category has been extended to include a seventh subcategory, <span class="redtext">paper handbags</span>.
+			<h3>New stock incoming!</h3>
+			<p>New models being added to the website soon, stay tuned!!</p>
 		    </div>
 		</div>
 		<div class="col-sm-6">
@@ -114,10 +114,10 @@ Seq[Any](format.raw/*8.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Wed Feb 27 16:50:22 GMT 2019
-                  SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/main.scala.html
-                  HASH: e644b620186e43dfeb05ed4c1cc8e63918396cb1
-                  MATRIX: 1206->260|1330->291|1436->370|1451->376|1511->415|1763->639|1792->640|1821->641|1927->719|1956->720|1989->726|2026->735|2055->736|2084->737|2160->785|2189->786|2222->792|2262->804|2291->805|2320->806|2367->825|2396->826|2429->832|2468->843|2497->844|2526->845|2610->901|2639->902|2672->908|2711->919|2740->920|2769->921|2835->959|2864->960|2897->966|2934->975|2963->976|2992->977|3032->989|3061->990|3090->992|3392->1267|3420->1286|3459->1287|3505->1302|3543->1313|3558->1319|3602->1342|3656->1369|3688->1392|3727->1393|3773->1408|3811->1419|3826->1425|3873->1451|3931->1482|3965->1507|4004->1508|4050->1523|4088->1534|4103->1540|4151->1567|4715->2104|4743->2111|4777->2118
+                  DATE: Thu Feb 28 12:23:38 GMT 2019
+                  SOURCE: /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/views/main.scala.html
+                  HASH: 8dda45368e336fa7525b2d73200e4ee5536add09
+                  MATRIX: 1206->260|1330->291|1436->370|1451->376|1511->415|1763->639|1792->640|1821->641|1927->719|1956->720|1989->726|2026->735|2055->736|2084->737|2160->785|2189->786|2222->792|2262->804|2291->805|2320->806|2367->825|2396->826|2429->832|2468->843|2497->844|2526->845|2610->901|2639->902|2672->908|2711->919|2740->920|2769->921|2835->959|2864->960|2897->966|2934->975|2963->976|2992->977|3032->989|3061->990|3090->992|3392->1267|3420->1286|3459->1287|3505->1302|3543->1313|3558->1319|3602->1342|3656->1369|3692->1396|3731->1397|3777->1412|3815->1423|3830->1429|3877->1455|3939->1490|3973->1515|4012->1516|4058->1531|4096->1542|4111->1548|4159->1575|4556->1945|4584->1952|4618->1959
                   LINES: 33->7|38->8|41->11|41->11|41->11|46->16|46->16|46->16|46->16|46->16|47->17|47->17|47->17|47->17|47->17|47->17|48->18|48->18|48->18|48->18|48->18|48->18|49->19|49->19|49->19|49->19|49->19|49->19|50->20|50->20|50->20|50->20|50->20|50->20|51->21|51->21|51->21|51->21|51->21|51->21|52->22|62->32|62->32|62->32|62->32|62->32|62->32|62->32|63->33|63->33|63->33|63->33|63->33|63->33|63->33|64->34|64->34|64->34|64->34|64->34|64->34|64->34|80->50|80->50|81->51
                   -- GENERATED --
               */

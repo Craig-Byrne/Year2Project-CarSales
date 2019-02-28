@@ -78,9 +78,79 @@ Seq[Any](_display_(/*1.2*/main("Products")/*1.18*/{_display_(Seq[Any](format.raw
 			<td>8800</td>
 			<td>Silver</td>
 		</tr>
+
+		<tr>
+			<td>4</td>
+			<td>Ford</td>
+			<td>Ka</td>
+			<td>2010</td>
+			<td>Petrol</td>
+			<td>3000</td>
+			<td>Silver</td>
+		</tr>
+
+		<tr>
+			<td>5</td>
+			<td>Ford</td>
+			<td>Fiesta</td>
+			<td>2013</td>
+			<td>Petrol</td>
+			<td>6700</td>
+			<td>Silver</td>
+		</tr>
+
+		<tr>
+			<td>6</td>
+			<td>Ford</td>
+			<td>Mondeo</td>
+			<td>2007</td>
+			<td>Petrol</td>
+			<td>2600</td>
+			<td>Silver</td>
+		</tr>
+
+		<tr>
+			<td>7</td>
+			<td>Volkswagen</td>
+			<td>Passat</td>
+			<td>2014</td>
+			<td>Diesel</td>
+			<td>9500</td>
+			<td>Red</td>
+		</tr>
+
+		<tr>
+			<td>8</td>
+			<td>Seat</td>
+			<td>Ibiza</td>
+			<td>2016</td>
+			<td>Petrol</td>
+			<td>9000</td>
+			<td>Grey</td>
+		</tr>
+
+		<tr>
+			<td>9</td>
+			<td>Volkswagen</td>
+			<td>Golf</td>
+			<td>2009</td>
+			<td>Diesel</td>
+			<td>6200</td>
+			<td>White</td>
+		</tr>
+
+		<tr>
+			<td>10</td>
+			<td>Audi</td>
+			<td>A3</td>
+			<td>2014</td>
+			<td>Petrol</td>
+			<td>10500</td>
+			<td>Black</td>
+		</tr>
 		</tbody>
 	</table>
-""")))}),format.raw/*51.2*/("""
+""")))}),format.raw/*121.2*/("""
 
 """))
       }
@@ -98,11 +168,11 @@ Seq[Any](_display_(/*1.2*/main("Products")/*1.18*/{_display_(Seq[Any](format.raw
 
               /*
                   -- GENERATED --
-                  DATE: Wed Feb 27 15:37:20 GMT 2019
-                  SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/products.scala.html
-                  HASH: 4c351013b6434d29737decd1e2743c1b3a7cd503
-                  MATRIX: 1033->1|1057->17|1095->18|1124->21|2061->928
-                  LINES: 33->1|33->1|33->1|34->2|83->51
+                  DATE: Thu Feb 28 12:08:43 GMT 2019
+                  SOURCE: /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/views/products.scala.html
+                  HASH: 20827ff034c82eff58269dc75f750f836d6f6838
+                  MATRIX: 1033->1|1057->17|1095->18|1124->21|3094->1960
+                  LINES: 33->1|33->1|33->1|34->2|153->121
                   -- GENERATED --
               */
           
