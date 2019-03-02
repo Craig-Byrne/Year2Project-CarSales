@@ -1,7 +1,7 @@
 package controllers;
 
 import play.mvc.*;
-
+import models.Product;
 import views.html.*;
 
 /**
@@ -21,7 +21,14 @@ public class HomeController extends Controller {
     }
 
     public Result products(){
-        return ok(products.render()); 
+
+        Product p = new Product(1L,"Volkswagen","Polo",2012,"Petrol",7750,"Red");
+        Product p2 = new Product(2L,"Opel","Corsa",2010,"Petrol",6450,"Black");
+        Product p3 = new Product(3L,"Renault","Clio",2014,"Petrol",8800,"Silver");
+        Product p4 = new Product(4L,"Ford","Ka",2010,"Petrol",3000,"Silver");
+        Product p5 = new Product(5L,"Ford","Fiesta",2013,"Petrol",6700,"Silver");
+
+        return ok(products.render(p)); 
     }
 
     public Result contactUs(){

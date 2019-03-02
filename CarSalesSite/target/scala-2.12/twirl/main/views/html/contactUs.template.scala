@@ -51,8 +51,8 @@ Seq[Any](_display_(/*1.2*/main("Contact us")/*1.20*/{_display_(Seq[Any](format.r
 
               /*
                   -- GENERATED --
-                  DATE: Thu Feb 28 11:58:08 GMT 2019
-                  SOURCE: /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/views/contactUs.scala.html
+                  DATE: Fri Mar 01 16:11:06 GMT 2019
+                  SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/contactUs.scala.html
                   HASH: 093897bb22416189456e9d735ed8963306982d9d
                   MATRIX: 1034->1|1060->19|1098->20|1127->23|1178->45
                   LINES: 33->1|33->1|33->1|34->2|35->3

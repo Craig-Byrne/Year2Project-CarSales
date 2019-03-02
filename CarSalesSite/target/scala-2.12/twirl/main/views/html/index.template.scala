@@ -52,8 +52,8 @@ Seq[Any](_display_(/*1.2*/main("Home")/*1.14*/{_display_(Seq[Any](format.raw/*1.
 
               /*
                   -- GENERATED --
-                  DATE: Thu Feb 28 11:58:08 GMT 2019
-                  SOURCE: /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/views/index.scala.html
+                  DATE: Fri Mar 01 16:11:06 GMT 2019
+                  SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/index.scala.html
                   HASH: 238d0637a45310913dc334041dbef6a4ab75722b
                   MATRIX: 1030->1|1050->13|1088->14|1117->17|1246->117
                   LINES: 33->1|33->1|33->1|34->2|36->4

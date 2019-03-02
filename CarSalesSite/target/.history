@@ -7,3 +7,10 @@ run
 exit
 run
 exit
+sbt
+exit
+sbt
+cd
+exit
+run
+exit

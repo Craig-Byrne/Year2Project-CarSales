@@ -1,3 +1,22 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/CarOnSale.java:10:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol: class Models[0m
-[0m[[0m[31merror[0m] [0m[0mpublic class CarOnSale extends Models {[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/Product.java:4:1: package javax.persistence does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport javax.persistence.Id;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/Product.java:6:1: package io.ebean does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport io.ebean.*;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/Product.java:11:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol: class Model[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class Product extends Model{[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/Product.java:10:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol: class Entity[0m
+[0m[[0m[31merror[0m] [0m[0m@Entity[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/Product.java:47:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   class Finder[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class models.Product[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Finder<Long,Product> find = new Finder<>(Product.class);[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/Product.java:15:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   class Id[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class models.Product[0m
+[0m[[0m[31merror[0m] [0m[0m    @Id[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/Product.java:47:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   class Finder[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class models.Product[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Finder<Long,Product> find = new Finder<>(Product.class);[0m

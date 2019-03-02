@@ -1,7 +1,9 @@
+@(product: models.Product)
+
 @main("Products"){
 	<h1>Products</h1>
 	<h4>All cars listed are second hand, however all come fully serviced, valeted and with a valid NCT.</h4>
-	<table class="table table-bordered table-hover table-condensed">
+	<table class="table table-bordered table-striped">
 		<thead>
 			<!-- The header row-->
 			<tr>
@@ -17,105 +19,15 @@
 
 		<tbody>
 			<!-- Product rows -->
-		<tr>
-			<td>1</td>
-			<td>Volkswagen</td>
-			<td>Polo</td>
-			<td>2012</td>
-			<td>Petrol</td>
-			<td>7750</td>
-			<td>Red</td>
-		</tr>
-
-		<tr>
-			<td>2</td>
-			<td>Opel</td>
-			<td>Corsa</td>
-			<td>2010</td>
-			<td>Petrol</td>
-			<td>6450</td>
-			<td>Black</td>
-		</tr>
-
-		<tr>
-			<td>3</td>
-			<td>Renault</td>
-			<td>Clio</td>
-			<td>2014</td>
-			<td>Petrol</td>
-			<td>8800</td>
-			<td>Silver</td>
-		</tr>
-
-		<tr>
-			<td>4</td>
-			<td>Ford</td>
-			<td>Ka</td>
-			<td>2010</td>
-			<td>Petrol</td>
-			<td>3000</td>
-			<td>Silver</td>
-		</tr>
-
-		<tr>
-			<td>5</td>
-			<td>Ford</td>
-			<td>Fiesta</td>
-			<td>2013</td>
-			<td>Petrol</td>
-			<td>6700</td>
-			<td>Silver</td>
-		</tr>
-
-		<tr>
-			<td>6</td>
-			<td>Ford</td>
-			<td>Mondeo</td>
-			<td>2007</td>
-			<td>Petrol</td>
-			<td>2600</td>
-			<td>Silver</td>
-		</tr>
-
-		<tr>
-			<td>7</td>
-			<td>Volkswagen</td>
-			<td>Passat</td>
-			<td>2014</td>
-			<td>Diesel</td>
-			<td>9500</td>
-			<td>Red</td>
-		</tr>
-
-		<tr>
-			<td>8</td>
-			<td>Seat</td>
-			<td>Ibiza</td>
-			<td>2016</td>
-			<td>Petrol</td>
-			<td>9000</td>
-			<td>Grey</td>
-		</tr>
-
-		<tr>
-			<td>9</td>
-			<td>Volkswagen</td>
-			<td>Golf</td>
-			<td>2009</td>
-			<td>Diesel</td>
-			<td>6200</td>
-			<td>White</td>
-		</tr>
-
-		<tr>
-			<td>10</td>
-			<td>Audi</td>
-			<td>A3</td>
-			<td>2014</td>
-			<td>Petrol</td>
-			<td>10500</td>
-			<td>Black</td>
-		</tr>
+			<tr scope="row">
+				<td>@product.getId</td>
+				<td>@product.getMake</td>	
+				<td>@product.getModel</td>
+				<td>@product.getYear</td>
+				<td>@product.getFuelType</td>
+				<td>&euro;@product.getPrice</td>
+				<td>@product.getColour</td>
+			</tr>
 		</tbody>
 	</table>
 }

@@ -22,18 +22,20 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object products extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object products extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.Product,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(product: models.Product):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](_display_(/*1.2*/main("Products")/*1.18*/{_display_(Seq[Any](format.raw/*1.19*/("""
-	"""),format.raw/*2.2*/("""<h1>Products</h1>
+Seq[Any](format.raw/*1.27*/("""
+
+"""),_display_(/*3.2*/main("Products")/*3.18*/{_display_(Seq[Any](format.raw/*3.19*/("""
+	"""),format.raw/*4.2*/("""<h1>Products</h1>
 	<h4>All cars listed are second hand, however all come fully serviced, valeted and with a valid NCT.</h4>
-	<table class="table table-bordered table-hover table-condensed">
+	<table class="table table-bordered table-striped">
 		<thead>
 			<!-- The header row-->
 			<tr>
@@ -49,117 +51,27 @@ Seq[Any](_display_(/*1.2*/main("Products")/*1.18*/{_display_(Seq[Any](format.raw
 
 		<tbody>
 			<!-- Product rows -->
-		<tr>
-			<td>1</td>
-			<td>Volkswagen</td>
-			<td>Polo</td>
-			<td>2012</td>
-			<td>Petrol</td>
-			<td>7750</td>
-			<td>Red</td>
-		</tr>
-
-		<tr>
-			<td>2</td>
-			<td>Opel</td>
-			<td>Corsa</td>
-			<td>2010</td>
-			<td>Petrol</td>
-			<td>6450</td>
-			<td>Black</td>
-		</tr>
-
-		<tr>
-			<td>3</td>
-			<td>Renault</td>
-			<td>Clio</td>
-			<td>2014</td>
-			<td>Petrol</td>
-			<td>8800</td>
-			<td>Silver</td>
-		</tr>
-
-		<tr>
-			<td>4</td>
-			<td>Ford</td>
-			<td>Ka</td>
-			<td>2010</td>
-			<td>Petrol</td>
-			<td>3000</td>
-			<td>Silver</td>
-		</tr>
-
-		<tr>
-			<td>5</td>
-			<td>Ford</td>
-			<td>Fiesta</td>
-			<td>2013</td>
-			<td>Petrol</td>
-			<td>6700</td>
-			<td>Silver</td>
-		</tr>
-
-		<tr>
-			<td>6</td>
-			<td>Ford</td>
-			<td>Mondeo</td>
-			<td>2007</td>
-			<td>Petrol</td>
-			<td>2600</td>
-			<td>Silver</td>
-		</tr>
-
-		<tr>
-			<td>7</td>
-			<td>Volkswagen</td>
-			<td>Passat</td>
-			<td>2014</td>
-			<td>Diesel</td>
-			<td>9500</td>
-			<td>Red</td>
-		</tr>
-
-		<tr>
-			<td>8</td>
-			<td>Seat</td>
-			<td>Ibiza</td>
-			<td>2016</td>
-			<td>Petrol</td>
-			<td>9000</td>
-			<td>Grey</td>
-		</tr>
-
-		<tr>
-			<td>9</td>
-			<td>Volkswagen</td>
-			<td>Golf</td>
-			<td>2009</td>
-			<td>Diesel</td>
-			<td>6200</td>
-			<td>White</td>
-		</tr>
-
-		<tr>
-			<td>10</td>
-			<td>Audi</td>
-			<td>A3</td>
-			<td>2014</td>
-			<td>Petrol</td>
-			<td>10500</td>
-			<td>Black</td>
-		</tr>
+			<tr scope="row">
+				<td>"""),_display_(/*23.10*/product/*23.17*/.getId),format.raw/*23.23*/("""</td>
+				<td>"""),_display_(/*24.10*/product/*24.17*/.getMake),format.raw/*24.25*/("""</td>	
+				<td>"""),_display_(/*25.10*/product/*25.17*/.getModel),format.raw/*25.26*/("""</td>
+				<td>"""),_display_(/*26.10*/product/*26.17*/.getYear),format.raw/*26.25*/("""</td>
+				<td>"""),_display_(/*27.10*/product/*27.17*/.getFuelType),format.raw/*27.29*/("""</td>
+				<td>&euro;"""),_display_(/*28.16*/product/*28.23*/.getPrice),format.raw/*28.32*/("""</td>
+				<td>"""),_display_(/*29.10*/product/*29.17*/.getColour),format.raw/*29.27*/("""</td>
+			</tr>
 		</tbody>
 	</table>
-""")))}),format.raw/*121.2*/("""
+""")))}),format.raw/*33.2*/("""
 
 """))
       }
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(product:models.Product): play.twirl.api.HtmlFormat.Appendable = apply(product)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((models.Product) => play.twirl.api.HtmlFormat.Appendable) = (product) => apply(product)
 
   def ref: this.type = this
 
@@ -168,11 +80,11 @@ Seq[Any](_display_(/*1.2*/main("Products")/*1.18*/{_display_(Seq[Any](format.raw
 
               /*
                   -- GENERATED --
-                  DATE: Thu Feb 28 12:08:43 GMT 2019
-                  SOURCE: /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/views/products.scala.html
-                  HASH: 20827ff034c82eff58269dc75f750f836d6f6838
-                  MATRIX: 1033->1|1057->17|1095->18|1124->21|3094->1960
-                  LINES: 33->1|33->1|33->1|34->2|153->121
+                  DATE: Sat Mar 02 16:21:18 GMT 2019
+                  SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/products.scala.html
+                  HASH: 263804f131e20e2b7eef35f11e0b5299912e0b84
+                  MATRIX: 959->1|1079->26|1109->31|1133->47|1171->48|1200->51|1684->508|1700->515|1727->521|1770->537|1786->544|1815->552|1859->569|1875->576|1905->585|1948->601|1964->608|1993->616|2036->632|2052->639|2085->651|2134->673|2150->680|2180->689|2223->705|2239->712|2270->722|2341->763
+                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|55->23|55->23|55->23|56->24|56->24|56->24|57->25|57->25|57->25|58->26|58->26|58->26|59->27|59->27|59->27|60->28|60->28|60->28|61->29|61->29|61->29|65->33
                   -- GENERATED --
               */
           

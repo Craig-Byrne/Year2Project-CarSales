@@ -1,1 +1,18 @@
-[0m[[0m[0mdebug[0m] [0m[0mNo changes[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set(/home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/services/ApplicationTimer.java, /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/filters/ExampleFilter.java, /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/controllers/HomeController.java, /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/controllers/AsyncController.java, /home/wdd/Year2Project-CarSales/CarSalesSite/app/models/ItemOnSale.java, /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/target/scala-2.12/routes/main/controllers/routes.java, /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/Module.java, /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/services/AtomicCounter.java, /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/controllers/CountController.java, /home/wdd/Year2Project/Year2Project-CarSales/CarSalesSite/app/services/Counter.java)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/Product.java)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(/home/wdd/Year2Project-CarSales/CarSalesSite/target/scala-2.12/classes/models/Product.class)[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(models.Product)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set(/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/Product.java)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(models.Product)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/wdd/Year2Project-CarSales/CarSalesSite/app/models/Product.java)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Java source to /home/wdd/Year2Project-CarSales/CarSalesSite/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@7fe309fe directly...[0m
