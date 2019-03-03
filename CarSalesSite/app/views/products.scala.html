@@ -1,4 +1,5 @@
-@(product: models.Product)
+@import models.Product
+@(productList: List[Product])
 
 @main("Products"){
 	<h1>Products</h1>
@@ -19,6 +20,7 @@
 
 		<tbody>
 			<!-- Product rows -->
+			@for(product <- productList) {
 			<tr scope="row">
 				<td>@product.getId</td>
 				<td>@product.getMake</td>	
@@ -28,7 +30,9 @@
 				<td>&euro;@product.getPrice</td>
 				<td>@product.getColour</td>
 			</tr>
+			}
 		</tbody>
 	</table>
 }
+
 

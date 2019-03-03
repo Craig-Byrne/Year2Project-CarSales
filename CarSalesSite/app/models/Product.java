@@ -30,33 +30,6 @@ public class Product extends Model {
 
     private String colour;
 
-/*
-@Entity
-public class Product extends Model {
-
-    // Properties
-
-    @Id
-    private Long id;  
-
-    private String make;     
-
-    private String model; 
-
-    private int year;
-
-    private String fuelType;
-
-    @Constraints.Min(0)
-    private int price;
-
-    private String colour;
-
-    // Default Constructor
-    public Product() {     
-
-    }
-*/
     // Contructor to initialise object
     public  Product(Long id, String make, String model, int year, String fuelType, int price, String colour) {
         this.id = id;
