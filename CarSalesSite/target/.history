@@ -14,3 +14,14 @@ cd
 exit
 run
 exit
+playVersion
+playEbeanVersion
+playJdbcVersion
+run
+exit
+run
+exit
+run
+exit
+run
+exit

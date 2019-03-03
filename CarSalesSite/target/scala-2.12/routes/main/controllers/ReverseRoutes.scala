@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Fri Mar 01 16:11:06 GMT 2019
+// @DATE:Sun Mar 03 14:01:52 GMT 2019
 
 import play.api.mvc.Call
 

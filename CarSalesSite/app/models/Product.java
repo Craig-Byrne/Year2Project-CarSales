@@ -1,14 +1,38 @@
 package models;
 
 import java.util.*;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import io.ebean.*;
 import play.data.format.*;
 import play.data.validation.*;
 
 @Entity
-public class Product extends Model{
+public class Product extends Model {
+
+    // Properties
+    @Id
+    private Long id;
+
+    @Constraints.Required
+    private String make;
+
+    @Constraints.Required
+    private String model;
+
+    @Constraints.Required
+    private int year;
+
+    private String fuelType;
+
+    @Constraints.Min(0)
+    private int price;
+
+    private String colour;
+
+/*
+@Entity
+public class Product extends Model {
 
     // Properties
 
@@ -32,7 +56,7 @@ public class Product extends Model{
     public Product() {     
 
     }
-
+*/
     // Contructor to initialise object
     public  Product(Long id, String make, String model, int year, String fuelType, int price, String colour) {
         this.id = id;
