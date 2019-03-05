@@ -11,6 +11,10 @@ GET     /message                    controllers.AsyncController.message
 
 GET     /products                     controllers.HomeController.products
 
+GET     /addItem                      controllers.HomeController.addItem
+
+POST    /addItemSubmit                controllers.HomeController.addItemSubmit
+
 GET     /contactUs                    controllers.HomeController.contactUs
 
 # Map static resources from the /public folder to the /assets URL path

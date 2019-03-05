@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Sun Mar 03 14:01:52 GMT 2019
+// @DATE:Tue Mar 05 17:38:41 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -39,12 +39,52 @@ package controllers.javascript {
     }
 
   
+    // @LINE:22
+    def contactUs: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.contactUs",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "contactUs"})
+        }
+      """
+    )
+  
+    // @LINE:20
+    def updateItem: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.updateItem",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "updateItem/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
     // @LINE:12
     def products: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.products",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "products"})
+        }
+      """
+    )
+  
+    // @LINE:18
+    def deleteItem: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.deleteItem",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteItem/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:16
+    def addItemSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addItemSubmit",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addItemSubmit"})
         }
       """
     )
@@ -60,18 +100,18 @@ package controllers.javascript {
     )
   
     // @LINE:14
-    def contactUs: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.contactUs",
+    def addItem: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addItem",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "contactUs"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addItem"})
         }
       """
     )
   
   }
 
-  // @LINE:17
+  // @LINE:25
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -79,7 +119,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:17
+    // @LINE:25
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

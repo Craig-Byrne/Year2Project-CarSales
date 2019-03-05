@@ -4,6 +4,13 @@
 @main("Products"){
 	<h1>Products</h1>
 	<h4>All cars listed are second hand, however all come fully serviced, valeted and with a valid NCT.</h4>
+
+	@if(flash.containsKey("success")){
+		<div class="alert alert-success">
+			@flash.get("success")
+		</div>
+	}
+
 	<table class="table table-bordered table-striped">
 		<thead>
 			<!-- The header row-->
@@ -29,10 +36,25 @@
 				<td>@product.getFuelType</td>
 				<td>&euro;@product.getPrice</td>
 				<td>@product.getColour</td>
+				<td>
+					<a href="@routes.HomeController.updateItem(id)" class="button-xs btn-danger">
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
+				</td>
+				<td>
+					<a href="@routes.HomeController.deleteItem(p.getId)" class="button-xs btn-danger">
+						<span class="glyphicon glyphicon-trash"></span>
+					</a>
+				</td>
 			</tr>
 			}
 		</tbody>
 	</table>
+	<p>
+		<a href="@routes.HomeController.addItem()">
+			<button class="btn btn-primary">Add a product</button>
+		</a>
+	</p>
 }
 
 

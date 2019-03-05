@@ -36,7 +36,14 @@ Seq[Any](format.raw/*2.30*/("""
 """),_display_(/*4.2*/main("Products")/*4.18*/{_display_(Seq[Any](format.raw/*4.19*/("""
 	"""),format.raw/*5.2*/("""<h1>Products</h1>
 	<h4>All cars listed are second hand, however all come fully serviced, valeted and with a valid NCT.</h4>
-	<table class="table table-bordered table-striped">
+
+	"""),_display_(/*8.3*/if(flash.containsKey("success"))/*8.35*/{_display_(Seq[Any](format.raw/*8.36*/("""
+		"""),format.raw/*9.3*/("""<div class="alert alert-success">
+			"""),_display_(/*10.5*/flash/*10.10*/.get("success")),format.raw/*10.25*/("""
+		"""),format.raw/*11.3*/("""</div>
+	""")))}),format.raw/*12.3*/("""
+
+	"""),format.raw/*14.2*/("""<table class="table table-bordered table-striped">
 		<thead>
 			<!-- The header row-->
 			<tr>
@@ -52,20 +59,35 @@ Seq[Any](format.raw/*2.30*/("""
 
 		<tbody>
 			<!-- Product rows -->
-			"""),_display_(/*23.5*/for(product <- productList) yield /*23.32*/ {_display_(Seq[Any](format.raw/*23.34*/("""
-			"""),format.raw/*24.4*/("""<tr scope="row">
-				<td>"""),_display_(/*25.10*/product/*25.17*/.getId),format.raw/*25.23*/("""</td>
-				<td>"""),_display_(/*26.10*/product/*26.17*/.getMake),format.raw/*26.25*/("""</td>	
-				<td>"""),_display_(/*27.10*/product/*27.17*/.getModel),format.raw/*27.26*/("""</td>
-				<td>"""),_display_(/*28.10*/product/*28.17*/.getYear),format.raw/*28.25*/("""</td>
-				<td>"""),_display_(/*29.10*/product/*29.17*/.getFuelType),format.raw/*29.29*/("""</td>
-				<td>&euro;"""),_display_(/*30.16*/product/*30.23*/.getPrice),format.raw/*30.32*/("""</td>
-				<td>"""),_display_(/*31.10*/product/*31.17*/.getColour),format.raw/*31.27*/("""</td>
+			"""),_display_(/*30.5*/for(product <- productList) yield /*30.32*/ {_display_(Seq[Any](format.raw/*30.34*/("""
+			"""),format.raw/*31.4*/("""<tr scope="row">
+				<td>"""),_display_(/*32.10*/product/*32.17*/.getId),format.raw/*32.23*/("""</td>
+				<td>"""),_display_(/*33.10*/product/*33.17*/.getMake),format.raw/*33.25*/("""</td>	
+				<td>"""),_display_(/*34.10*/product/*34.17*/.getModel),format.raw/*34.26*/("""</td>
+				<td>"""),_display_(/*35.10*/product/*35.17*/.getYear),format.raw/*35.25*/("""</td>
+				<td>"""),_display_(/*36.10*/product/*36.17*/.getFuelType),format.raw/*36.29*/("""</td>
+				<td>&euro;"""),_display_(/*37.16*/product/*37.23*/.getPrice),format.raw/*37.32*/("""</td>
+				<td>"""),_display_(/*38.10*/product/*38.17*/.getColour),format.raw/*38.27*/("""</td>
+				<td>
+					<a href=""""),_display_(/*40.16*/routes/*40.22*/.HomeController.updateItem(id)),format.raw/*40.52*/("""" class="button-xs btn-danger">
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
+				</td>
+				<td>
+					<a href=""""),_display_(/*45.16*/routes/*45.22*/.HomeController.deleteItem(p.getId)),format.raw/*45.57*/("""" class="button-xs btn-danger">
+						<span class="glyphicon glyphicon-trash"></span>
+					</a>
+				</td>
 			</tr>
-			""")))}),format.raw/*33.5*/("""
-		"""),format.raw/*34.3*/("""</tbody>
+			""")))}),format.raw/*50.5*/("""
+		"""),format.raw/*51.3*/("""</tbody>
 	</table>
-""")))}),format.raw/*36.2*/("""
+	<p>
+		<a href=""""),_display_(/*54.13*/routes/*54.19*/.HomeController.addItem()),format.raw/*54.44*/("""">
+			<button class="btn btn-primary">Add a product</button>
+		</a>
+	</p>
+""")))}),format.raw/*58.2*/("""
 
 
 """))
@@ -84,11 +106,11 @@ Seq[Any](format.raw/*2.30*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 03 20:10:40 GMT 2019
+                  DATE: Tue Mar 05 17:41:48 GMT 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/products.scala.html
-                  HASH: da5035d174b984f38af04286db87f8e2ccf0d035
-                  MATRIX: 651->1|987->25|1110->53|1140->58|1164->74|1202->75|1231->78|1688->509|1731->536|1771->538|1803->543|1857->570|1873->577|1900->583|1943->599|1959->606|1988->614|2032->631|2048->638|2078->647|2121->663|2137->670|2166->678|2209->694|2225->701|2258->713|2307->735|2323->742|2353->751|2396->767|2412->774|2443->784|2494->805|2525->809|2577->831
-                  LINES: 24->1|29->2|34->2|36->4|36->4|36->4|37->5|55->23|55->23|55->23|56->24|57->25|57->25|57->25|58->26|58->26|58->26|59->27|59->27|59->27|60->28|60->28|60->28|61->29|61->29|61->29|62->30|62->30|62->30|63->31|63->31|63->31|65->33|66->34|68->36
+                  HASH: 8500243e7baea6a5869a0bb84c6b9f0a5429c87d
+                  MATRIX: 651->1|987->25|1110->53|1140->58|1164->74|1202->75|1231->78|1386->208|1426->240|1464->241|1494->245|1559->284|1573->289|1609->304|1640->308|1680->318|1712->323|2042->627|2085->654|2125->656|2157->661|2211->688|2227->695|2254->701|2297->717|2313->724|2342->732|2386->749|2402->756|2432->765|2475->781|2491->788|2520->796|2563->812|2579->819|2612->831|2661->853|2677->860|2707->869|2750->885|2766->892|2797->902|2856->934|2871->940|2922->970|3085->1106|3100->1112|3156->1147|3310->1271|3341->1275|3407->1314|3422->1320|3468->1345|3577->1424
+                  LINES: 24->1|29->2|34->2|36->4|36->4|36->4|37->5|40->8|40->8|40->8|41->9|42->10|42->10|42->10|43->11|44->12|46->14|62->30|62->30|62->30|63->31|64->32|64->32|64->32|65->33|65->33|65->33|66->34|66->34|66->34|67->35|67->35|67->35|68->36|68->36|68->36|69->37|69->37|69->37|70->38|70->38|70->38|72->40|72->40|72->40|77->45|77->45|77->45|82->50|83->51|86->54|86->54|86->54|90->58
                   -- GENERATED --
               */
           

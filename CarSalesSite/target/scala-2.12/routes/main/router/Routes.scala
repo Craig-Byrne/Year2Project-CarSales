@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Sun Mar 03 14:01:52 GMT 2019
+// @DATE:Tue Mar 05 17:38:41 GMT 2019
 
 package router
 
@@ -20,7 +20,7 @@ class Routes(
   CountController_3: controllers.CountController,
   // @LINE:10
   AsyncController_2: controllers.AsyncController,
-  // @LINE:17
+  // @LINE:25
   Assets_1: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -33,7 +33,7 @@ class Routes(
     CountController_3: controllers.CountController,
     // @LINE:10
     AsyncController_2: controllers.AsyncController,
-    // @LINE:17
+    // @LINE:25
     Assets_1: controllers.Assets
   ) = this(errorHandler, HomeController_0, CountController_3, AsyncController_2, Assets_1, "/")
 
@@ -51,6 +51,10 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """count""", """controllers.CountController.count"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """products""", """controllers.HomeController.products"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addItem""", """controllers.HomeController.addItem"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addItemSubmit""", """controllers.HomeController.addItemSubmit"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """deleteItem/""" + "$" + """id<[^/]+>""", """controllers.HomeController.deleteItem(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """updateItem/""" + "$" + """id<[^/]+>""", """controllers.HomeController.updateItem(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """contactUs""", """controllers.HomeController.contactUs"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
@@ -133,10 +137,82 @@ class Routes(
   )
 
   // @LINE:14
-  private[this] lazy val controllers_HomeController_contactUs4_route = Route("GET",
+  private[this] lazy val controllers_HomeController_addItem4_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addItem")))
+  )
+  private[this] lazy val controllers_HomeController_addItem4_invoker = createInvoker(
+    HomeController_0.addItem,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "addItem",
+      Nil,
+      "GET",
+      this.prefix + """addItem""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:16
+  private[this] lazy val controllers_HomeController_addItemSubmit5_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addItemSubmit")))
+  )
+  private[this] lazy val controllers_HomeController_addItemSubmit5_invoker = createInvoker(
+    HomeController_0.addItemSubmit,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "addItemSubmit",
+      Nil,
+      "POST",
+      this.prefix + """addItemSubmit""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:18
+  private[this] lazy val controllers_HomeController_deleteItem6_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("deleteItem/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_HomeController_deleteItem6_invoker = createInvoker(
+    HomeController_0.deleteItem(fakeValue[Long]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "deleteItem",
+      Seq(classOf[Long]),
+      "GET",
+      this.prefix + """deleteItem/""" + "$" + """id<[^/]+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:20
+  private[this] lazy val controllers_HomeController_updateItem7_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("updateItem/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_HomeController_updateItem7_invoker = createInvoker(
+    HomeController_0.updateItem(fakeValue[Long]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "updateItem",
+      Seq(classOf[Long]),
+      "GET",
+      this.prefix + """updateItem/""" + "$" + """id<[^/]+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:22
+  private[this] lazy val controllers_HomeController_contactUs8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("contactUs")))
   )
-  private[this] lazy val controllers_HomeController_contactUs4_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_contactUs8_invoker = createInvoker(
     HomeController_0.contactUs,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -150,11 +226,11 @@ class Routes(
     )
   )
 
-  // @LINE:17
-  private[this] lazy val controllers_Assets_versioned5_route = Route("GET",
+  // @LINE:25
+  private[this] lazy val controllers_Assets_versioned9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned5_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned9_invoker = createInvoker(
     Assets_1.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -196,15 +272,39 @@ class Routes(
       }
   
     // @LINE:14
-    case controllers_HomeController_contactUs4_route(params@_) =>
+    case controllers_HomeController_addItem4_route(params@_) =>
       call { 
-        controllers_HomeController_contactUs4_invoker.call(HomeController_0.contactUs)
+        controllers_HomeController_addItem4_invoker.call(HomeController_0.addItem)
       }
   
-    // @LINE:17
-    case controllers_Assets_versioned5_route(params@_) =>
+    // @LINE:16
+    case controllers_HomeController_addItemSubmit5_route(params@_) =>
+      call { 
+        controllers_HomeController_addItemSubmit5_invoker.call(HomeController_0.addItemSubmit)
+      }
+  
+    // @LINE:18
+    case controllers_HomeController_deleteItem6_route(params@_) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_HomeController_deleteItem6_invoker.call(HomeController_0.deleteItem(id))
+      }
+  
+    // @LINE:20
+    case controllers_HomeController_updateItem7_route(params@_) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_HomeController_updateItem7_invoker.call(HomeController_0.updateItem(id))
+      }
+  
+    // @LINE:22
+    case controllers_HomeController_contactUs8_route(params@_) =>
+      call { 
+        controllers_HomeController_contactUs8_invoker.call(HomeController_0.contactUs)
+      }
+  
+    // @LINE:25
+    case controllers_Assets_versioned9_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned5_invoker.call(Assets_1.versioned(path, file))
+        controllers_Assets_versioned9_invoker.call(Assets_1.versioned(path, file))
       }
   }
 }

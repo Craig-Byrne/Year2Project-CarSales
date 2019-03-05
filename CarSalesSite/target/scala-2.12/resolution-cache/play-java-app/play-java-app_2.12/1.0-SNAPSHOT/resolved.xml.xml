@@ -4,7 +4,7 @@
 		module="play-java-app_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20190305155255"
+		publication="20190305161931"
 	>
 		<description>
 		play-java-app

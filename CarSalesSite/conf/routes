@@ -13,6 +13,12 @@ GET     /products                     controllers.HomeController.products
 
 GET     /addItem                      controllers.HomeController.addItem
 
+POST    /addItemSubmit                controllers.HomeController.addItemSubmit
+
+GET     /deleteItem/:id               controllers.HomeController.deleteItem(id: Long)
+
+GET     /updateItem/:id               controllers.HomeController.updateItem(id: Long)
+
 GET     /contactUs                    controllers.HomeController.contactUs
 
 # Map static resources from the /public folder to the /assets URL path
