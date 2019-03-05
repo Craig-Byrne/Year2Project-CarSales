@@ -31,6 +31,10 @@ public class HomeController extends Controller {
         return ok(products.render(productList));
     }
 
+    public Result addItem(){
+        return ok(addItem.render());
+    }
+
     public Result contactUs(){
         return ok(contactUs.render()); 
     }

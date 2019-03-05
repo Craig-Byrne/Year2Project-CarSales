@@ -1,14 +1,14 @@
-2019-03-03 20:29:15,603 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
-2019-03-03 20:29:16,063 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2019-03-03 20:29:17,402 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-5 - ApplicationTimer demo: Starting application at 2019-03-03T20:29:17.401Z
-2019-03-03 20:29:17,763 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-5 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-03-05 15:54:27,637 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
+2019-03-05 15:54:28,191 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2019-03-05 15:54:30,182 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-5 - ApplicationTimer demo: Starting application at 2019-03-05T15:54:30.181Z
+2019-03-05 15:54:30,466 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-5 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     filters.ExampleFilter
 
-2019-03-03 20:29:18,059 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-5 - Application started (Dev)
-2019-03-03 20:29:51,378 [INFO] from play.core.server.AkkaHttpServer in pool-5-thread-4 - Stopping server...
-2019-03-03 20:29:51,402 [INFO] from application in pool-5-thread-4 - ApplicationTimer demo: Stopping application at 2019-03-03T20:29:51.402Z after 34s.
-2019-03-03 20:29:51,429 [INFO] from application in pool-5-thread-4 - Shutting down connection pool.
+2019-03-05 15:54:30,734 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-5 - Application started (Dev)
+2019-03-05 15:54:50,189 [INFO] from play.core.server.AkkaHttpServer in pool-6-thread-4 - Stopping server...
+2019-03-05 15:54:50,206 [INFO] from application in pool-6-thread-4 - ApplicationTimer demo: Stopping application at 2019-03-05T15:54:50.206Z after 20s.
+2019-03-05 15:54:50,298 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
