@@ -34,16 +34,16 @@ public class HomeController extends Controller {
         return ok(products.render(productList));
     }
 
-    public Result addItem(){
+    public Result addProduct(){
         Form<Product> productForm = formFactory.form(Product.class);
-        return ok(addItem.render(productForm));
+        return ok(addProduct.render(productForm));
     }
 
-    public Result addItemSubmit(){
+    public Result addProductSubmit(){
         Form<Product> newProductForm = formFactory.form(Product.class).bindFromRequest();
 
         if (newProductForm.hasErrors()){
-            return badRequest(addItem.render(newProductForm));
+            return badRequest(addProduct.render(newProductForm));
         } else {
             Product newProduct = newProductForm.get();
             if (newProduct.getId() == null){
@@ -52,30 +52,29 @@ public class HomeController extends Controller {
                 newProduct.update();
             }
             newProduct.save();
-            flash("success", "Product" + newProduct.getMake() + "was added/updated.");
+            flash("success", "Product " + newProduct.getMake() + " " + newProduct.getModel() + " was added/updated.");
             return redirect(controllers.routes.HomeController.products());
         }
     }
 
-    public Result deleteItem(Long id){
-        this.id = id;
+    public Result deleteProduct(Long id){
         Product.find.ref(id).delete();
         flash("success", "Product has been deleted.");
         return redirect(controllers.routes.HomeController.products());
     }
 
-    public Result updateItem(Long id){
+    public Result updateProduct(Long id){
         Product p;
         Form<Product> productForm;
     
         try{
             p = Product.find.byId(id);
-            productForm = formFactory.form(Product.class).fill(i);
+            productForm = formFactory.form(Product.class).fill(p);
         } catch (Exception ex){
             return badRequest("error");
         }
 
-        return ok(addItem.render(productForm));
+        return ok(addProduct.render(productForm));
     }
 
     public Result contactUs(){

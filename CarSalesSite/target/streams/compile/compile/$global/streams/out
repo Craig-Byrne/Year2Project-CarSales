@@ -1,7 +1,12 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/views/products.scala.html:40:49: not found: value id[0m
-[0m[[0m[31merror[0m] [0m[0m					<a href="@routes.HomeController.updateItem(id)" class="button-xs btn-danger">[0m
-[0m[[0m[31merror[0m] [0m[0m					                                           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/views/products.scala.html:45:49: not found: value p[0m
-[0m[[0m[31merror[0m] [0m[0m					<a href="@routes.HomeController.deleteItem(p.getId)" class="button-xs btn-danger">[0m
-[0m[[0m[31merror[0m] [0m[0m					                                           ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/controllers/HomeController.java:39:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable addProduct[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class controllers.HomeController[0m
+[0m[[0m[31merror[0m] [0m[0m        return ok(addProduct.render(productForm));[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/controllers/HomeController.java:46:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable addProduct[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class controllers.HomeController[0m
+[0m[[0m[31merror[0m] [0m[0m            return badRequest(addProduct.render(newProductForm));[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2Project-CarSales/CarSalesSite/app/controllers/HomeController.java:77:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable addProduct[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class controllers.HomeController[0m
+[0m[[0m[31merror[0m] [0m[0m        return ok(addProduct.render(productForm));[0m

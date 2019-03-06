@@ -11,9 +11,13 @@ GET     /message                    controllers.AsyncController.message
 
 GET     /products                     controllers.HomeController.products
 
-GET     /addItem                      controllers.HomeController.addItem
+GET     /addProduct                      controllers.HomeController.addProduct
 
-POST    /addItemSubmit                controllers.HomeController.addItemSubmit
+POST    /addProductSubmit                controllers.HomeController.addProductSubmit
+
+GET     /deleteProduct/:id               controllers.HomeController.deleteProduct(id: Long)
+
+GET     /updateProduct/:id               controllers.HomeController.updateProduct(id: Long)
 
 GET     /contactUs                    controllers.HomeController.contactUs
 

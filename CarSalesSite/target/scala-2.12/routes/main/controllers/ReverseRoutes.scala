@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Tue Mar 05 17:38:41 GMT 2019
+// @DATE:Wed Mar 06 00:21:22 GMT 2019
 
 import play.api.mvc.Call
 
@@ -33,16 +33,22 @@ package controllers {
     }
 
   
+    // @LINE:16
+    def addProductSubmit(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "addProductSubmit")
+    }
+  
     // @LINE:22
     def contactUs(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "contactUs")
     }
   
-    // @LINE:20
-    def updateItem(id:Long): Call = {
+    // @LINE:18
+    def deleteProduct(id:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "updateItem/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
+      Call("GET", _prefix + { _defaultPrefix } + "deleteProduct/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
     // @LINE:12
@@ -51,28 +57,22 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "products")
     }
   
-    // @LINE:18
-    def deleteItem(id:Long): Call = {
+    // @LINE:20
+    def updateProduct(id:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "deleteItem/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
+      Call("GET", _prefix + { _defaultPrefix } + "updateProduct/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
-    // @LINE:16
-    def addItemSubmit(): Call = {
+    // @LINE:14
+    def addProduct(): Call = {
       
-      Call("POST", _prefix + { _defaultPrefix } + "addItemSubmit")
+      Call("GET", _prefix + { _defaultPrefix } + "addProduct")
     }
   
     // @LINE:6
     def index(): Call = {
       
       Call("GET", _prefix)
-    }
-  
-    // @LINE:14
-    def addItem(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "addItem")
     }
   
   }

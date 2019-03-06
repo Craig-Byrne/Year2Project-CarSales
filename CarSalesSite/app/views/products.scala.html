@@ -37,12 +37,12 @@
 				<td>&euro;@product.getPrice</td>
 				<td>@product.getColour</td>
 				<td>
-					<a href="@routes.HomeController.updateItem(id)" class="button-xs btn-danger">
+					<a href="@routes.HomeController.updateProduct(product.getId)" class="button-xs btn-danger">
 						<span class="glyphicon glyphicon-pencil"></span>
 					</a>
 				</td>
 				<td>
-					<a href="@routes.HomeController.deleteItem(p.getId)" class="button-xs btn-danger">
+					<a href="@routes.HomeController.deleteProduct(product.getId)" class="button-xs btn-danger" onclick="return confirmDel();">
 						<span class="glyphicon glyphicon-trash"></span>
 					</a>
 				</td>
@@ -51,7 +51,7 @@
 		</tbody>
 	</table>
 	<p>
-		<a href="@routes.HomeController.addItem()">
+		<a href="@routes.HomeController.addProduct()">
 			<button class="btn btn-primary">Add a product</button>
 		</a>
 	</p>

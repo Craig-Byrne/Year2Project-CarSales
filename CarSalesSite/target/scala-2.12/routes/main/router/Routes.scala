@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Tue Mar 05 17:38:41 GMT 2019
+// @DATE:Wed Mar 06 00:21:22 GMT 2019
 
 package router
 
@@ -51,10 +51,10 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """count""", """controllers.CountController.count"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """products""", """controllers.HomeController.products"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addItem""", """controllers.HomeController.addItem"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addItemSubmit""", """controllers.HomeController.addItemSubmit"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """deleteItem/""" + "$" + """id<[^/]+>""", """controllers.HomeController.deleteItem(id:Long)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """updateItem/""" + "$" + """id<[^/]+>""", """controllers.HomeController.updateItem(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addProduct""", """controllers.HomeController.addProduct"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addProductSubmit""", """controllers.HomeController.addProductSubmit"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """deleteProduct/""" + "$" + """id<[^/]+>""", """controllers.HomeController.deleteProduct(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """updateProduct/""" + "$" + """id<[^/]+>""", """controllers.HomeController.updateProduct(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """contactUs""", """controllers.HomeController.contactUs"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
@@ -137,72 +137,72 @@ class Routes(
   )
 
   // @LINE:14
-  private[this] lazy val controllers_HomeController_addItem4_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addItem")))
+  private[this] lazy val controllers_HomeController_addProduct4_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addProduct")))
   )
-  private[this] lazy val controllers_HomeController_addItem4_invoker = createInvoker(
-    HomeController_0.addItem,
+  private[this] lazy val controllers_HomeController_addProduct4_invoker = createInvoker(
+    HomeController_0.addProduct,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
-      "addItem",
+      "addProduct",
       Nil,
       "GET",
-      this.prefix + """addItem""",
+      this.prefix + """addProduct""",
       """""",
       Seq()
     )
   )
 
   // @LINE:16
-  private[this] lazy val controllers_HomeController_addItemSubmit5_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addItemSubmit")))
+  private[this] lazy val controllers_HomeController_addProductSubmit5_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addProductSubmit")))
   )
-  private[this] lazy val controllers_HomeController_addItemSubmit5_invoker = createInvoker(
-    HomeController_0.addItemSubmit,
+  private[this] lazy val controllers_HomeController_addProductSubmit5_invoker = createInvoker(
+    HomeController_0.addProductSubmit,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
-      "addItemSubmit",
+      "addProductSubmit",
       Nil,
       "POST",
-      this.prefix + """addItemSubmit""",
+      this.prefix + """addProductSubmit""",
       """""",
       Seq()
     )
   )
 
   // @LINE:18
-  private[this] lazy val controllers_HomeController_deleteItem6_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("deleteItem/"), DynamicPart("id", """[^/]+""",true)))
+  private[this] lazy val controllers_HomeController_deleteProduct6_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("deleteProduct/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_HomeController_deleteItem6_invoker = createInvoker(
-    HomeController_0.deleteItem(fakeValue[Long]),
+  private[this] lazy val controllers_HomeController_deleteProduct6_invoker = createInvoker(
+    HomeController_0.deleteProduct(fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
-      "deleteItem",
+      "deleteProduct",
       Seq(classOf[Long]),
       "GET",
-      this.prefix + """deleteItem/""" + "$" + """id<[^/]+>""",
+      this.prefix + """deleteProduct/""" + "$" + """id<[^/]+>""",
       """""",
       Seq()
     )
   )
 
   // @LINE:20
-  private[this] lazy val controllers_HomeController_updateItem7_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("updateItem/"), DynamicPart("id", """[^/]+""",true)))
+  private[this] lazy val controllers_HomeController_updateProduct7_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("updateProduct/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_HomeController_updateItem7_invoker = createInvoker(
-    HomeController_0.updateItem(fakeValue[Long]),
+  private[this] lazy val controllers_HomeController_updateProduct7_invoker = createInvoker(
+    HomeController_0.updateProduct(fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
-      "updateItem",
+      "updateProduct",
       Seq(classOf[Long]),
       "GET",
-      this.prefix + """updateItem/""" + "$" + """id<[^/]+>""",
+      this.prefix + """updateProduct/""" + "$" + """id<[^/]+>""",
       """""",
       Seq()
     )
@@ -272,27 +272,27 @@ class Routes(
       }
   
     // @LINE:14
-    case controllers_HomeController_addItem4_route(params@_) =>
+    case controllers_HomeController_addProduct4_route(params@_) =>
       call { 
-        controllers_HomeController_addItem4_invoker.call(HomeController_0.addItem)
+        controllers_HomeController_addProduct4_invoker.call(HomeController_0.addProduct)
       }
   
     // @LINE:16
-    case controllers_HomeController_addItemSubmit5_route(params@_) =>
+    case controllers_HomeController_addProductSubmit5_route(params@_) =>
       call { 
-        controllers_HomeController_addItemSubmit5_invoker.call(HomeController_0.addItemSubmit)
+        controllers_HomeController_addProductSubmit5_invoker.call(HomeController_0.addProductSubmit)
       }
   
     // @LINE:18
-    case controllers_HomeController_deleteItem6_route(params@_) =>
+    case controllers_HomeController_deleteProduct6_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_HomeController_deleteItem6_invoker.call(HomeController_0.deleteItem(id))
+        controllers_HomeController_deleteProduct6_invoker.call(HomeController_0.deleteProduct(id))
       }
   
     // @LINE:20
-    case controllers_HomeController_updateItem7_route(params@_) =>
+    case controllers_HomeController_updateProduct7_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_HomeController_updateItem7_invoker.call(HomeController_0.updateItem(id))
+        controllers_HomeController_updateProduct7_invoker.call(HomeController_0.updateProduct(id))
       }
   
     // @LINE:22
