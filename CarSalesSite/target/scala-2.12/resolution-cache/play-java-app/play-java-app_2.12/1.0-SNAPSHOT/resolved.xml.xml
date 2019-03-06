@@ -4,7 +4,7 @@
 		module="play-java-app_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20190305235842"
+		publication="20190306162652"
 	>
 		<description>
 		play-java-app
@@ -62,5 +62,6 @@
 		<dependency org="mysql" name="mysql-connector-java" rev="5.1.18" conf="compile->default(compile)"/>
 		<dependency org="org.avaje" name="ebean" rev="2.7.3" conf="compile->default(compile)"/>
 		<dependency org="javax.persistence" name="persistence-api" rev="1.0.2" conf="compile->default(compile)"/>
+		<dependency org="org.imgscalr" name="imgscalr-lib" rev="4.2" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

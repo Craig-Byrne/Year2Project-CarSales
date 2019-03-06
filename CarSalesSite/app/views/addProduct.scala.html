@@ -5,7 +5,9 @@
 @main("Add Product"){
     <p class="lead">Add a new product</p>
 
-    @form(action=routes.HomeController.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form"){
+    @form(action=routes.HomeController.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form",
+          'method -> "POST", 'enctype -> "multipart/form-data") {
+        
         @CSRF.formField
 
         @inputText(productForm("make"), '_label -> "Make", 'class -> "form-control")
@@ -14,6 +16,9 @@
         @inputText(productForm("fuel_type"), '_label -> "Fuel Type", 'class -> "form-control")
         @inputText(productForm("price"), '_label -> "Price", 'class -> "form-control")
         @inputText(productForm("colour"), '_label -> "Colour", 'class -> "form-control")
+
+        <label>Image Upload</label>
+        <input class="btn-sm btn-default" type="file" name="upload">
 
         @inputText(productForm("id"), '_label -> "", 'hidden -> "hidden")
 

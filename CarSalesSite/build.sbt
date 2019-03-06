@@ -29,3 +29,4 @@ libraryDependencies ++= Seq(
     "javax.persistence" % "persistence-api" % "1.0.2"
 )
 
+libraryDependencies += "org.imgscalr" % "imgscalr-lib" % "4.2"

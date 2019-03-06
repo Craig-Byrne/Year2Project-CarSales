@@ -12,6 +12,15 @@ import javax.inject.Inject;
 import play.data.*;
 import views.html.*;
 
+import play.mvc.Http.*;
+import play.mvc.Http.MultipartFormData.FilePart;
+import java.io.File;
+
+import java.io.IOException;
+import java.awt.image.*;
+import javax.imageio.*;
+import org.imgscalr.*;
+
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -51,8 +60,13 @@ public class HomeController extends Controller {
             } else {
                 newProduct.update();
             }
+
+            MultipartFormData data = request().body().asMultipartFormData();
+            FilePart image = data.getFile("upload");
+            String saveImageMessage = saveFile(newProduct.getId(), image);
+
             newProduct.save();
-            flash("success", "Product " + newProduct.getMake() + " " + newProduct.getModel() + " was added/updated.");
+            flash("success", "Product " + newProduct.getMake() + " " + newProduct.getModel() + " was added/updated " + saveImageMessage);
             return redirect(controllers.routes.HomeController.products());
         }
     }
@@ -79,6 +93,50 @@ public class HomeController extends Controller {
 
     public Result contactUs(){
         return ok(contactUs.render()); 
+    }
+
+    public String saveFile(Long id, FilePart<File> uploaded) {
+        if (uploaded != null) {
+
+            String mimeType = uploaded.getContentType();
+            if (mimeType.startsWith("image/")) {
+                
+                String fileName = uploaded.getFilename();
+
+                String extension = "";
+                int i = fileName.lastIndexOf('.');
+                if (i >= 0) {
+                    extension = fileName.substring(i +1);
+                }
+
+                File file = uploaded.getFile();
+
+                File dir = new File("public/images/productImages");
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                }
+
+                File newFile = new File("public/images/productImages/", id + "." + extension);
+                if (file.renameTo(newFile)) {
+                    try {
+                        BufferedImage img = ImageIO.read(newFile);
+                        BufferedImage scaledImg = Scalr.resize(img, 90);
+
+                        if (ImageIO.write(scaledImg, extension, new File("public/images/productImages/", id + "thumb.jpg"))) {
+                            return "/ file uploaded and thumbnail created.";
+                        } else {
+                            return "/ file uploaded but thubnail creation failed.";
+                        }
+                    } catch (IOException e) {
+                        return "/ file uploaded but thumbnail creation failed";
+                    }
+
+                } else {
+                     return "/ file upload failed";
+                }
+            }
+        }
+        return "/ no image file.";
     }
 
 
