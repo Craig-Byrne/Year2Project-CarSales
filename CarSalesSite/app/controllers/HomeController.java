@@ -3,6 +3,7 @@ package controllers;
 import play.mvc.*;
 import models.Product;
 
+import play.api.Environment;
 import play.db.ebean.Transactional;
 
 import java.lang.ProcessBuilder.Redirect;
@@ -28,10 +29,12 @@ import org.imgscalr.*;
 public class HomeController extends Controller {
 
     private FormFactory formFactory;
+    private Environment e;
 
     @Inject
-    public HomeController(FormFactory f){
+    public HomeController(FormFactory f, Environment env){
         this.formFactory = f;
+        this.e = env;
     }
 
     public Result index() {
@@ -40,7 +43,7 @@ public class HomeController extends Controller {
 
     public Result products(){
         List<Product> productList = Product.find.all();
-        return ok(products.render(productList));
+        return ok(products.render(productList, e));
     }
 
     public Result addProduct(){

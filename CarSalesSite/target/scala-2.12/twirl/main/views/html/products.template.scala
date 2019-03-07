@@ -22,31 +22,33 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 /*1.2*/import models.Product
+/*2.2*/import play.api.Environment
 
-object products extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[List[Product],play.twirl.api.HtmlFormat.Appendable] {
+object products extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[List[Product],play.api.Environment,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*2.2*/(productList: List[Product]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*3.2*/(productList: List[Product], env: play.api.Environment):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*2.30*/("""
+Seq[Any](format.raw/*3.57*/("""
 
-"""),_display_(/*4.2*/main("Products")/*4.18*/{_display_(Seq[Any](format.raw/*4.19*/("""
-	"""),format.raw/*5.2*/("""<h1>Products</h1>
+"""),_display_(/*5.2*/main("Products")/*5.18*/{_display_(Seq[Any](format.raw/*5.19*/("""
+	"""),format.raw/*6.2*/("""<h1>Products</h1>
 	<h4>All cars listed are second hand, however all come fully serviced, valeted and with a valid NCT.</h4>
 
-	"""),_display_(/*8.3*/if(flash.containsKey("success"))/*8.35*/{_display_(Seq[Any](format.raw/*8.36*/("""
-		"""),format.raw/*9.3*/("""<div class="alert alert-success">
-			"""),_display_(/*10.5*/flash/*10.10*/.get("success")),format.raw/*10.25*/("""
-		"""),format.raw/*11.3*/("""</div>
-	""")))}),format.raw/*12.3*/("""
+	"""),_display_(/*9.3*/if(flash.containsKey("success"))/*9.35*/{_display_(Seq[Any](format.raw/*9.36*/("""
+		"""),format.raw/*10.3*/("""<div class="alert alert-success">
+			"""),_display_(/*11.5*/flash/*11.10*/.get("success")),format.raw/*11.25*/("""
+		"""),format.raw/*12.3*/("""</div>
+	""")))}),format.raw/*13.3*/("""
 
-	"""),format.raw/*14.2*/("""<table class="table table-bordered table-striped">
+	"""),format.raw/*15.2*/("""<table class="table table-bordered table-striped">
 		<thead>
 			<!-- The header row-->
 			<tr>
+				<th>Image</th>
 				<th>ID</th>
 				<th>Make</th>
 				<th>Model</th>
@@ -59,45 +61,47 @@ Seq[Any](format.raw/*2.30*/("""
 
 		<tbody>
 			<!-- Product rows -->
-			"""),_display_(/*30.5*/for(product <- productList) yield /*30.32*/ {_display_(Seq[Any](format.raw/*30.34*/("""
-			"""),format.raw/*31.4*/("""<tr scope="row">
-				<td>"""),_display_(/*32.10*/product/*32.17*/.getId),format.raw/*32.23*/("""</td>
-				<td>"""),_display_(/*33.10*/product/*33.17*/.getMake),format.raw/*33.25*/("""</td>	
-				<td>"""),_display_(/*34.10*/product/*34.17*/.getModel),format.raw/*34.26*/("""</td>
-				<td>"""),_display_(/*35.10*/product/*35.17*/.getYear),format.raw/*35.25*/("""</td>
-				<td>"""),_display_(/*36.10*/product/*36.17*/.getFuelType),format.raw/*36.29*/("""</td>
-				<td>&euro;"""),_display_(/*37.16*/product/*37.23*/.getPrice),format.raw/*37.32*/("""</td>
-				<td>"""),_display_(/*38.10*/product/*38.17*/.getColour),format.raw/*38.27*/("""</td>
+			"""),_display_(/*32.5*/for(product <- productList) yield /*32.32*/ {_display_(Seq[Any](format.raw/*32.34*/("""
+			"""),format.raw/*33.4*/("""<tr scope="row">
+					"""),_display_(/*34.7*/if(env.resource("public/images/productImages/" + product.getId + "thumb.jpg").isDefined)/*34.95*/ {_display_(Seq[Any](format.raw/*34.97*/("""
+						"""),format.raw/*35.7*/("""<td><img src="/assets/images/productImages/"""),_display_(/*35.51*/(product.getId + "thumb.jpg")),format.raw/*35.80*/(""""/></td>
+					""")))}/*36.8*/else/*36.13*/{_display_(Seq[Any](format.raw/*36.14*/("""
+					"""),format.raw/*37.6*/("""<td><img src="/assets/images/productImages/noImage.jpg"/></td>
+				""")))}),format.raw/*38.6*/("""
+				"""),format.raw/*39.5*/("""<td>"""),_display_(/*39.10*/product/*39.17*/.getId),format.raw/*39.23*/("""</td>
+				<td>"""),_display_(/*40.10*/product/*40.17*/.getMake),format.raw/*40.25*/("""</td>	
+				<td>"""),_display_(/*41.10*/product/*41.17*/.getModel),format.raw/*41.26*/("""</td>
+				<td>"""),_display_(/*42.10*/product/*42.17*/.getYear),format.raw/*42.25*/("""</td>
+				<td>"""),_display_(/*43.10*/product/*43.17*/.getFuelType),format.raw/*43.29*/("""</td>
+				<td>&euro;"""),_display_(/*44.16*/product/*44.23*/.getPrice),format.raw/*44.32*/("""</td>
+				<td>"""),_display_(/*45.10*/product/*45.17*/.getColour),format.raw/*45.27*/("""</td>
 				<td>
-					<a href=""""),_display_(/*40.16*/routes/*40.22*/.HomeController.updateProduct(product.getId)),format.raw/*40.66*/("""" class="button-xs btn-danger">
+					<a href=""""),_display_(/*47.16*/routes/*47.22*/.HomeController.updateProduct(product.getId)),format.raw/*47.66*/("""" class="button-xs btn-danger">
 						<span class="glyphicon glyphicon-pencil"></span>
 					</a>
 				</td>
 				<td>
-					<a href=""""),_display_(/*45.16*/routes/*45.22*/.HomeController.deleteProduct(product.getId)),format.raw/*45.66*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
+					<a href=""""),_display_(/*52.16*/routes/*52.22*/.HomeController.deleteProduct(product.getId)),format.raw/*52.66*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
 						<span class="glyphicon glyphicon-trash"></span>
 					</a>
 				</td>
 			</tr>
-			""")))}),format.raw/*50.5*/("""
-		"""),format.raw/*51.3*/("""</tbody>
+			""")))}),format.raw/*57.5*/("""
+		"""),format.raw/*58.3*/("""</tbody>
 	</table>
 	<p>
-		<a href=""""),_display_(/*54.13*/routes/*54.19*/.HomeController.addProduct()),format.raw/*54.47*/("""">
+		<a href=""""),_display_(/*61.13*/routes/*61.19*/.HomeController.addProduct()),format.raw/*61.47*/("""">
 			<button class="btn btn-primary">Add a product</button>
 		</a>
 	</p>
-""")))}),format.raw/*58.2*/("""
-
-
-"""))
+""")))}))
       }
     }
   }
 
-  def render(productList:List[Product]): play.twirl.api.HtmlFormat.Appendable = apply(productList)
+  def render(productList:List[Product],env:play.api.Environment): play.twirl.api.HtmlFormat.Appendable = apply(productList,env)
 
-  def f:((List[Product]) => play.twirl.api.HtmlFormat.Appendable) = (productList) => apply(productList)
+  def f:((List[Product],play.api.Environment) => play.twirl.api.HtmlFormat.Appendable) = (productList,env) => apply(productList,env)
 
   def ref: this.type = this
 
@@ -106,11 +110,11 @@ Seq[Any](format.raw/*2.30*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 06 18:20:13 GMT 2019
+                  DATE: Thu Mar 07 17:01:12 GMT 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/products.scala.html
-                  HASH: d54b57adb92ac742abce08e870ae31dd8c0b412c
-                  MATRIX: 651->1|987->25|1110->53|1140->58|1164->74|1202->75|1231->78|1386->208|1426->240|1464->241|1494->245|1559->284|1573->289|1609->304|1640->308|1680->318|1712->323|2042->627|2085->654|2125->656|2157->661|2211->688|2227->695|2254->701|2297->717|2313->724|2342->732|2386->749|2402->756|2432->765|2475->781|2491->788|2520->796|2563->812|2579->819|2612->831|2661->853|2677->860|2707->869|2750->885|2766->892|2797->902|2856->934|2871->940|2936->984|3099->1120|3114->1126|3179->1170|3364->1325|3395->1329|3461->1368|3476->1374|3525->1402|3634->1481
-                  LINES: 24->1|29->2|34->2|36->4|36->4|36->4|37->5|40->8|40->8|40->8|41->9|42->10|42->10|42->10|43->11|44->12|46->14|62->30|62->30|62->30|63->31|64->32|64->32|64->32|65->33|65->33|65->33|66->34|66->34|66->34|67->35|67->35|67->35|68->36|68->36|68->36|69->37|69->37|69->37|70->38|70->38|70->38|72->40|72->40|72->40|77->45|77->45|77->45|82->50|83->51|86->54|86->54|86->54|90->58
+                  HASH: 08996e4e61848c7bf774805757b08c3269d1a3d6
+                  MATRIX: 651->1|680->25|1043->55|1193->110|1223->115|1247->131|1285->132|1314->135|1469->265|1509->297|1547->298|1578->302|1643->341|1657->346|1693->361|1724->365|1764->375|1796->380|2146->704|2189->731|2229->733|2261->738|2311->762|2408->850|2448->852|2483->860|2554->904|2604->933|2638->950|2651->955|2690->956|2724->963|2823->1032|2856->1038|2888->1043|2904->1050|2931->1056|2974->1072|2990->1079|3019->1087|3063->1104|3079->1111|3109->1120|3152->1136|3168->1143|3197->1151|3240->1167|3256->1174|3289->1186|3338->1208|3354->1215|3384->1224|3427->1240|3443->1247|3474->1257|3533->1289|3548->1295|3613->1339|3776->1475|3791->1481|3856->1525|4041->1680|4072->1684|4138->1723|4153->1729|4202->1757
+                  LINES: 24->1|25->2|30->3|35->3|37->5|37->5|37->5|38->6|41->9|41->9|41->9|42->10|43->11|43->11|43->11|44->12|45->13|47->15|64->32|64->32|64->32|65->33|66->34|66->34|66->34|67->35|67->35|67->35|68->36|68->36|68->36|69->37|70->38|71->39|71->39|71->39|71->39|72->40|72->40|72->40|73->41|73->41|73->41|74->42|74->42|74->42|75->43|75->43|75->43|76->44|76->44|76->44|77->45|77->45|77->45|79->47|79->47|79->47|84->52|84->52|84->52|89->57|90->58|93->61|93->61|93->61
                   -- GENERATED --
               */
           

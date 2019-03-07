@@ -1,5 +1,6 @@
 @import models.Product
-@(productList: List[Product])
+@import play.api.Environment
+@(productList: List[Product], env: play.api.Environment)
 
 @main("Products"){
 	<h1>Products</h1>
@@ -15,6 +16,7 @@
 		<thead>
 			<!-- The header row-->
 			<tr>
+				<th>Image</th>
 				<th>ID</th>
 				<th>Make</th>
 				<th>Model</th>
@@ -29,6 +31,11 @@
 			<!-- Product rows -->
 			@for(product <- productList) {
 			<tr scope="row">
+					@if(env.resource("public/images/productImages/" + product.getId + "thumb.jpg").isDefined) {
+						<td><img src="/assets/images/productImages/@(product.getId + "thumb.jpg")"/></td>
+					}	else {
+					<td><img src="/assets/images/productImages/noImage.jpg"/></td>
+				}
 				<td>@product.getId</td>
 				<td>@product.getMake</td>	
 				<td>@product.getModel</td>
@@ -56,5 +63,3 @@
 		</a>
 	</p>
 }
-
-
