@@ -24,17 +24,17 @@ import play.core.j.PlayFormsMagicForJava._
 /*1.2*/import models.Product
 /*2.2*/import play.api.Environment
 
-object products extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[List[Product],play.api.Environment,play.twirl.api.HtmlFormat.Appendable] {
+object products extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[List[Product],play.api.Environment,models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*3.2*/(productList: List[Product], env: play.api.Environment):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*3.2*/(productList: List[Product], env: play.api.Environment, user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*3.57*/("""
+Seq[Any](format.raw/*3.82*/("""
 
-"""),_display_(/*5.2*/main("Products")/*5.18*/{_display_(Seq[Any](format.raw/*5.19*/("""
+"""),_display_(/*5.2*/main("Products", user)/*5.24*/{_display_(Seq[Any](format.raw/*5.25*/("""
 	"""),format.raw/*6.2*/("""<h1>Products</h1>
 	<h4>All cars listed are second hand, however all come fully serviced, valeted and with a valid NCT.</h4>
 
@@ -99,9 +99,9 @@ Seq[Any](format.raw/*3.57*/("""
     }
   }
 
-  def render(productList:List[Product],env:play.api.Environment): play.twirl.api.HtmlFormat.Appendable = apply(productList,env)
+  def render(productList:List[Product],env:play.api.Environment,user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(productList,env,user)
 
-  def f:((List[Product],play.api.Environment) => play.twirl.api.HtmlFormat.Appendable) = (productList,env) => apply(productList,env)
+  def f:((List[Product],play.api.Environment,models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (productList,env,user) => apply(productList,env,user)
 
   def ref: this.type = this
 
@@ -110,10 +110,10 @@ Seq[Any](format.raw/*3.57*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 07 17:01:12 GMT 2019
+                  DATE: Fri Mar 22 12:19:09 GMT 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/products.scala.html
-                  HASH: 08996e4e61848c7bf774805757b08c3269d1a3d6
-                  MATRIX: 651->1|680->25|1043->55|1193->110|1223->115|1247->131|1285->132|1314->135|1469->265|1509->297|1547->298|1578->302|1643->341|1657->346|1693->361|1724->365|1764->375|1796->380|2146->704|2189->731|2229->733|2261->738|2311->762|2408->850|2448->852|2483->860|2554->904|2604->933|2638->950|2651->955|2690->956|2724->963|2823->1032|2856->1038|2888->1043|2904->1050|2931->1056|2974->1072|2990->1079|3019->1087|3063->1104|3079->1111|3109->1120|3152->1136|3168->1143|3197->1151|3240->1167|3256->1174|3289->1186|3338->1208|3354->1215|3384->1224|3427->1240|3443->1247|3474->1257|3533->1289|3548->1295|3613->1339|3776->1475|3791->1481|3856->1525|4041->1680|4072->1684|4138->1723|4153->1729|4202->1757
+                  HASH: f4d2337657316ff6e92ef12165626af149ac9120
+                  MATRIX: 651->1|680->25|1061->55|1236->135|1266->140|1296->162|1334->163|1363->166|1518->296|1558->328|1596->329|1627->333|1692->372|1706->377|1742->392|1773->396|1813->406|1845->411|2195->735|2238->762|2278->764|2310->769|2360->793|2457->881|2497->883|2532->891|2603->935|2653->964|2687->981|2700->986|2739->987|2773->994|2872->1063|2905->1069|2937->1074|2953->1081|2980->1087|3023->1103|3039->1110|3068->1118|3112->1135|3128->1142|3158->1151|3201->1167|3217->1174|3246->1182|3289->1198|3305->1205|3338->1217|3387->1239|3403->1246|3433->1255|3476->1271|3492->1278|3523->1288|3582->1320|3597->1326|3662->1370|3825->1506|3840->1512|3905->1556|4090->1711|4121->1715|4187->1754|4202->1760|4251->1788
                   LINES: 24->1|25->2|30->3|35->3|37->5|37->5|37->5|38->6|41->9|41->9|41->9|42->10|43->11|43->11|43->11|44->12|45->13|47->15|64->32|64->32|64->32|65->33|66->34|66->34|66->34|67->35|67->35|67->35|68->36|68->36|68->36|69->37|70->38|71->39|71->39|71->39|71->39|72->40|72->40|72->40|73->41|73->41|73->41|74->42|74->42|74->42|75->43|75->43|75->43|76->44|76->44|76->44|77->45|77->45|77->45|79->47|79->47|79->47|84->52|84->52|84->52|89->57|90->58|93->61|93->61|93->61
                   -- GENERATED --
               */

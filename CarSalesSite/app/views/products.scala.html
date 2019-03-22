@@ -1,8 +1,8 @@
 @import models.Product
 @import play.api.Environment
-@(productList: List[Product], env: play.api.Environment)
+@(productList: List[Product], env: play.api.Environment, user: models.users.User)
 
-@main("Products"){
+@main("Products", user){
 	<h1>Products</h1>
 	<h4>All cars listed are second hand, however all come fully serviced, valeted and with a valid NCT.</h4>
 

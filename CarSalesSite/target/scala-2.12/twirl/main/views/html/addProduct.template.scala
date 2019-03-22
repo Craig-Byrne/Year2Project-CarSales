@@ -22,10 +22,10 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object addProduct extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[Form[models.Product],play.twirl.api.HtmlFormat.Appendable] {
+object addProduct extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Form[models.Product],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(productForm: Form[models.Product]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(productForm: Form[models.Product], user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 /*3.2*/import helper._
@@ -33,7 +33,7 @@ object addProduct extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api
 
 Seq[Any](format.raw/*2.1*/("""
 """),format.raw/*4.1*/("""
-"""),_display_(/*5.2*/main("Add Product")/*5.21*/{_display_(Seq[Any](format.raw/*5.22*/("""
+"""),_display_(/*5.2*/main("Add Product", user)/*5.27*/{_display_(Seq[Any](format.raw/*5.28*/("""
     """),format.raw/*6.5*/("""<p class="lead">Add a new product</p>
 
     """),_display_(/*8.6*/form(action=routes.HomeController.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form",
@@ -65,9 +65,9 @@ Seq[Any](format.raw/*2.1*/("""
     }
   }
 
-  def render(productForm:Form[models.Product]): play.twirl.api.HtmlFormat.Appendable = apply(productForm)
+  def render(productForm:Form[models.Product],user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(productForm,user)
 
-  def f:((Form[models.Product]) => play.twirl.api.HtmlFormat.Appendable) = (productForm) => apply(productForm)
+  def f:((Form[models.Product],models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (productForm,user) => apply(productForm,user)
 
   def ref: this.type = this
 
@@ -76,10 +76,10 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 06 15:27:00 GMT 2019
+                  DATE: Fri Mar 22 12:21:05 GMT 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/addProduct.scala.html
-                  HASH: 7170ccb2d0c490607d048dad6fe37550e73bdbd6
-                  MATRIX: 967->1|1075->39|1119->37|1146->55|1173->57|1200->76|1238->77|1269->82|1338->126|1509->289|1548->291|1594->310|1607->314|1638->324|1676->335|1772->410|1809->420|1907->497|1944->507|2040->582|2077->592|2183->677|2220->687|2318->764|2355->774|2455->853|2492->863|2626->970|2711->1034|2748->1044|2904->1173|2919->1179|2966->1205|3114->1323
+                  HASH: 687b95fdc43a1c7f6fee17c0a0787d6e08b6923a
+                  MATRIX: 985->1|1118->64|1162->62|1189->80|1216->82|1249->107|1287->108|1318->113|1387->157|1558->320|1597->322|1643->341|1656->345|1687->355|1725->366|1821->441|1858->451|1956->528|1993->538|2089->613|2126->623|2232->708|2269->718|2367->795|2404->805|2504->884|2541->894|2675->1001|2760->1065|2797->1075|2953->1204|2968->1210|3015->1236|3163->1354
                   LINES: 28->1|31->3|34->2|35->4|36->5|36->5|36->5|37->6|39->8|40->9|40->9|42->11|42->11|42->11|44->13|44->13|45->14|45->14|46->15|46->15|47->16|47->16|48->17|48->17|49->18|49->18|51->20|54->23|54->23|56->25|58->27|58->27|58->27|62->31
                   -- GENERATED --
               */

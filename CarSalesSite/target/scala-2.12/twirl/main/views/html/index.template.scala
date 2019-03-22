@@ -22,18 +22,19 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](_display_(/*1.2*/main("Home")/*1.14*/{_display_(Seq[Any](format.raw/*1.15*/("""
-	"""),format.raw/*2.2*/("""<h1>Welcome to IrelandCarSales</h1>
+Seq[Any](format.raw/*1.27*/("""
+"""),_display_(/*2.2*/main("Home", user)/*2.20*/{_display_(Seq[Any](format.raw/*2.21*/("""
+	"""),format.raw/*3.2*/("""<h1>Welcome to IrelandCarSales</h1>
 	<h3>Here you can buy second hand cars at a cheap price</h3>
-""")))}),format.raw/*4.2*/(""" 
+""")))}),format.raw/*5.2*/(""" 
 
 
 """))
@@ -41,9 +42,9 @@ Seq[Any](_display_(/*1.2*/main("Home")/*1.14*/{_display_(Seq[Any](format.raw/*1.
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(user)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (user) => apply(user)
 
   def ref: this.type = this
 
@@ -52,11 +53,11 @@ Seq[Any](_display_(/*1.2*/main("Home")/*1.14*/{_display_(Seq[Any](format.raw/*1.
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 01 16:11:06 GMT 2019
+                  DATE: Fri Mar 22 12:19:09 GMT 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/index.scala.html
-                  HASH: 238d0637a45310913dc334041dbef6a4ab75722b
-                  MATRIX: 1030->1|1050->13|1088->14|1117->17|1246->117
-                  LINES: 33->1|33->1|33->1|34->2|36->4
+                  HASH: e73d731ae316439c043b9f4eab8a373ee9634179
+                  MATRIX: 959->1|1079->26|1107->29|1133->47|1171->48|1200->51|1329->151
+                  LINES: 28->1|33->1|34->2|34->2|34->2|35->3|37->5
                   -- GENERATED --
               */
           

@@ -12,6 +12,7 @@ import java.util.List;
 import javax.inject.Inject;
 import play.data.*;
 import views.html.*;
+import models.users.*;
 
 import play.mvc.Http.*;
 import play.mvc.Http.MultipartFormData.FilePart;
@@ -21,6 +22,7 @@ import java.io.IOException;
 import java.awt.image.*;
 import javax.imageio.*;
 import org.imgscalr.*;
+import controllers.LoginController;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -38,24 +40,26 @@ public class HomeController extends Controller {
     }
 
     public Result index() {
-        return ok(index.render());
+        return ok(index.render(User.getUserById(session().get("email"))));
     }
 
     public Result products(){
         List<Product> productList = Product.find.all();
-        return ok(products.render(productList, e));
+        return ok(products.render(productList, e, User.getUserById(session().get("email"))));
     }
 
+    @With(AuthAdmin.class)
     public Result addProduct(){
         Form<Product> productForm = formFactory.form(Product.class);
-        return ok(addProduct.render(productForm));
+        return ok(addProduct.render(productForm, User.getUserById(session().get("email"))));
     }
 
+    @With(AuthAdmin.class)
     public Result addProductSubmit(){
         Form<Product> newProductForm = formFactory.form(Product.class).bindFromRequest();
 
         if (newProductForm.hasErrors()){
-            return badRequest(addProduct.render(newProductForm));
+            return badRequest(addProduct.render(newProductForm, User.getUserById(session().get("email"))));
         } else {
             Product newProduct = newProductForm.get();
             if (newProduct.getId() == null){
@@ -74,12 +78,14 @@ public class HomeController extends Controller {
         }
     }
 
+    @With(AuthAdmin.class)
     public Result deleteProduct(Long id){
         Product.find.ref(id).delete();
         flash("success", "Product has been deleted.");
         return redirect(controllers.routes.HomeController.products());
     }
 
+    @With(AuthAdmin.class)
     public Result updateProduct(Long id){
         Product p;
         Form<Product> productForm;
@@ -91,11 +97,11 @@ public class HomeController extends Controller {
             return badRequest("error");
         }
 
-        return ok(addProduct.render(productForm));
+        return ok(addProduct.render(productForm, User.getUserById(session().get("email"))));
     }
 
     public Result contactUs(){
-        return ok(contactUs.render()); 
+        return ok(contactUs.render(User.getUserById(session().get("email")))); 
     }
 
     public String saveFile(Long id, FilePart<File> uploaded) {
@@ -141,7 +147,6 @@ public class HomeController extends Controller {
         }
         return "/ no image file.";
     }
-
-
-
 }
+
+

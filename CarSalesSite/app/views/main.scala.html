@@ -1,10 +1,4 @@
-@*
- * This template is called from the `index` template. This template
- * handles the rendering of the page header and body tags. It takes
- * two arguments, a `String` for the title of the page and an `Html`
- * object to insert into the body of the page.
- *@
-@(title: String)(content: Html)
+@(title: String, user: models.users.User)(content: Html)
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,7 +26,7 @@
 		    <li @if(title == "Home"){class="active"}><a href="@routes.HomeController.index()">Home</a></li>
 		    <li @if(title == "Cars on Sale"){class="active"}><a href="@routes.HomeController.products()">Cars on Sale</a></li>
 		    <li @if(title == "Contact us"){class="active"}><a href="@routes.HomeController.contactUs()">Contact us</a></li>
-			<li @if(title == "Log In"){class="active"}><a href="@routes.LoginController.login()">Log Out</a></li>
+			<li @if(title == "Log In"){class="active"}><a href="@routes.LoginController.login()">Log In</a></li>
 		</ul>
 	    </div>
 	</nav>
