@@ -1,0 +1,33 @@
+@import models.Inquiries
+@import play.api.Environment
+@(inquiryList: List[Inquiries], env: play.api.Environment, user: models.users.User)
+
+@main("Inquiries", user){
+    <h1>Inquiries</h1>
+    
+    <table class="table table-bordered table-striped">
+		<thead>
+			<!-- The header row-->
+			<tr>
+				<th>ID</th>
+				<th>Full Name</th>
+				<th>Email Address</th>
+				<th>Phone Number</th>
+				<th>Inquiry</th>
+			</tr>
+        </thead>
+        
+        <tbody>
+			<!-- Product rows -->
+			@for(Inquiries <- inquiryList) {
+			<tr scope="row">
+				<td>@Inquiries.getId</td>
+				<td>@Inquiries.getFullName</td>	
+				<td>@Inquiries.getEmail</td>
+				<td>@Inquiries.getPhoneNumber</td>
+				<td>@Inquiries.getInquiry</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}

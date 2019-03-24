@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Fri Mar 22 12:42:18 GMT 2019
+// @DATE:Sun Mar 24 19:55:42 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:32
+  // @LINE:36
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:32
+    // @LINE:36
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -79,6 +79,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:30
+    def inquirySubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.inquirySubmit",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "inquirySubmit"})
+        }
+      """
+    )
+  
     // @LINE:18
     def deleteProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.deleteProduct",
@@ -115,6 +125,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addProduct"})
+        }
+      """
+    )
+  
+    // @LINE:32
+    def inquiries: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.inquiries",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "inquiries"})
         }
       """
     )

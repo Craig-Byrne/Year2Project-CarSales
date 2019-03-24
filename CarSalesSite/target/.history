@@ -84,3 +84,9 @@ run
 exit
 run
 exit
+run
+exit
+./sbt h2-browser
+h2-browser
+run
+exit

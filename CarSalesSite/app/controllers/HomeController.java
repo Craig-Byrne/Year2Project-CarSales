@@ -13,6 +13,7 @@ import javax.inject.Inject;
 import play.data.*;
 import views.html.*;
 import models.users.*;
+import models.Inquiries;
 
 import play.mvc.Http.*;
 import play.mvc.Http.MultipartFormData.FilePart;
@@ -46,6 +47,12 @@ public class HomeController extends Controller {
     public Result products(){
         List<Product> productList = Product.find.all();
         return ok(products.render(productList, e, User.getUserById(session().get("email"))));
+    }
+
+    @With(AuthAdmin.class)
+    public Result inquiries(){
+        List<Inquiries> inquiryList = Inquiries.find.all();
+        return ok(inquiries.render(inquiryList, e, User.getUserById(session().get("email"))));
     }
 
     @With(AuthAdmin.class)
@@ -101,7 +108,27 @@ public class HomeController extends Controller {
     }
 
     public Result contactUs(){
-        return ok(contactUs.render(User.getUserById(session().get("email")))); 
+            Form<Inquiries> inquiryForm = formFactory.form(Inquiries.class);
+        return ok(contactUs.render(inquiryForm, User.getUserById(session().get("email")))); 
+    }
+
+    public Result inquirySubmit(){
+        Form<Inquiries> newInquiryForm = formFactory.form(Inquiries.class).bindFromRequest();
+
+        if (newInquiryForm.hasErrors()){
+            return badRequest(contactUs.render(newInquiryForm, User.getUserById(session().get("email"))));
+        } else {
+            Inquiries newInquiry = newInquiryForm.get();
+            if (newInquiry.getId() == null){
+                newInquiry.save();
+            } else {
+                newInquiry.update();
+            }
+
+            newInquiry.save();
+            flash("success", "Inquiry " + newInquiry.getFullName() + " was added ");
+            return redirect(controllers.routes.HomeController.contactUs());
+        }
     }
 
     public String saveFile(Long id, FilePart<File> uploaded) {

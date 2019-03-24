@@ -14,6 +14,15 @@ create table car_on_sale (
   constraint pk_car_on_sale primary key (id)
 );
 
+create table inquiries (
+  id                            bigint auto_increment not null,
+  full_name                     varchar(255),
+  email                         varchar(255),
+  phone_number                  varchar(255),
+  inquiry                       varchar(255),
+  constraint pk_inquiries primary key (id)
+);
+
 create table item_on_sale (
   id                            bigint auto_increment not null,
   make                          varchar(255),
@@ -48,6 +57,8 @@ create table user (
 # --- !Downs
 
 drop table if exists car_on_sale;
+
+drop table if exists inquiries;
 
 drop table if exists item_on_sale;
 

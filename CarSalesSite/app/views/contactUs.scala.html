@@ -1,6 +1,29 @@
-@(user: models.users.User)
+@(inquiryForm: Form[models.Inquiries], user: models.users.User)
+@import helper._
+
 @main("Contact us", user){
 	<h1>Contact us</h1>
+
+	@form(action=routes.HomeController.inquirySubmit(), 'class -> "form-horizontal", 'role -> "form",
+          'method -> "POST", 'enctype -> "multipart/form-data") {
+
+			@CSRF.formField
+
+	@inputText(inquiryForm("fullName"), '_label -> "Full Name", 'class -> "form-control")
+	@inputText(inquiryForm("email"), '_label -> "Email Address", 'class -> "form-control")
+	@inputText(inquiryForm("phoneNumber"), '_label -> "Phone Number", 'class -> "form-control")
+	@inputText(inquiryForm("inquiry"), '_label -> "Information on car inquiring about", 'class -> "form-control")
+
+	@inputText(inquiryForm("id"), '_label -> "", 'hidden -> "hidden")
+
+	<div class="actions">
+		<input type="submit" value="Add inquiry" class="btn btn-primary">
+		<a href="@routes.HomeController.contactUs()">
+			<button type="button" class="btn btn-warning">Cancel</button>
+		</a>
+	</div>
 }
+}
+
 
 

@@ -27,6 +27,10 @@ GET     /logout                     controllers.LoginController.logout
 
 GET     /contactUs                    controllers.HomeController.contactUs
 
+GET     /inquirySubmit                    controllers.HomeController.inquirySubmit
+
+GET     /inquiries                        controllers.HomeController.inquiries
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
