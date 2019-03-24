@@ -40,7 +40,6 @@ Seq[Any](format.raw/*4.1*/("""
 		<thead>
 			<!-- The header row-->
 			<tr>
-				<th>ID</th>
 				<th>Full Name</th>
 				<th>Email Address</th>
 				<th>Phone Number</th>
@@ -50,16 +49,15 @@ Seq[Any](format.raw/*4.1*/("""
         
         <tbody>
 			<!-- Product rows -->
-			"""),_display_(/*22.5*/for(Inquiries <- inquiryList) yield /*22.34*/ {_display_(Seq[Any](format.raw/*22.36*/("""
-			"""),format.raw/*23.4*/("""<tr scope="row">
-				<td>"""),_display_(/*24.10*/Inquiries/*24.19*/.getId),format.raw/*24.25*/("""</td>
-				<td>"""),_display_(/*25.10*/Inquiries/*25.19*/.getFullName),format.raw/*25.31*/("""</td>	
-				<td>"""),_display_(/*26.10*/Inquiries/*26.19*/.getEmail),format.raw/*26.28*/("""</td>
-				<td>"""),_display_(/*27.10*/Inquiries/*27.19*/.getPhoneNumber),format.raw/*27.34*/("""</td>
-				<td>"""),_display_(/*28.10*/Inquiries/*28.19*/.getInquiry),format.raw/*28.30*/("""</td>
+			"""),_display_(/*21.5*/for(Inquiries <- inquiryList) yield /*21.34*/ {_display_(Seq[Any](format.raw/*21.36*/("""
+			"""),format.raw/*22.4*/("""<tr scope="row">
+				<td>"""),_display_(/*23.10*/Inquiries/*23.19*/.getFullName),format.raw/*23.31*/("""</td>	
+				<td>"""),_display_(/*24.10*/Inquiries/*24.19*/.getEmail),format.raw/*24.28*/("""</td>
+				<td>"""),_display_(/*25.10*/Inquiries/*25.19*/.getPhoneNumber),format.raw/*25.34*/("""</td>
+				<td>"""),_display_(/*26.10*/Inquiries/*26.19*/.getInquiry),format.raw/*26.30*/("""</td>
             </tr>
-        """)))}),format.raw/*30.10*/("""
-    """),format.raw/*31.5*/("""</tbody>
+        """)))}),format.raw/*28.10*/("""
+    """),format.raw/*29.5*/("""</tbody>
 </table>
 """)))}))
       }
@@ -77,11 +75,11 @@ Seq[Any](format.raw/*4.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 24 19:52:20 GMT 2019
+                  DATE: Sun Mar 24 20:47:49 GMT 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/inquiries.scala.html
-                  HASH: 2f3b3533eb2d4553051eff9425f0d06e5dad35df
-                  MATRIX: 651->1|682->26|1066->55|1242->138|1269->140|1300->163|1338->164|1369->169|1711->485|1756->514|1796->516|1827->520|1880->546|1898->555|1925->561|1967->576|1985->585|2018->597|2061->613|2079->622|2109->631|2151->646|2169->655|2205->670|2247->685|2265->694|2297->705|2361->738|2393->743
-                  LINES: 24->1|25->2|30->3|35->4|36->5|36->5|36->5|37->6|53->22|53->22|53->22|54->23|55->24|55->24|55->24|56->25|56->25|56->25|57->26|57->26|57->26|58->27|58->27|58->27|59->28|59->28|59->28|61->30|62->31
+                  HASH: 781ae2ed2d35e200a243292d3eca685db3ecbcd9
+                  MATRIX: 651->1|682->26|1066->55|1242->138|1269->140|1300->163|1338->164|1369->169|1695->469|1740->498|1780->500|1811->504|1864->530|1882->539|1915->551|1958->567|1976->576|2006->585|2048->600|2066->609|2102->624|2144->639|2162->648|2194->659|2258->692|2290->697
+                  LINES: 24->1|25->2|30->3|35->4|36->5|36->5|36->5|37->6|52->21|52->21|52->21|53->22|54->23|54->23|54->23|55->24|55->24|55->24|56->25|56->25|56->25|57->26|57->26|57->26|59->28|60->29
                   -- GENERATED --
               */
           

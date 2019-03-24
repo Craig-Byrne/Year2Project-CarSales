@@ -44,7 +44,7 @@ Seq[Any](format.raw/*2.1*/("""
         """),_display_(/*13.10*/inputText(productForm("make"), '_label -> "Make", 'class -> "form-control")),format.raw/*13.85*/("""
         """),_display_(/*14.10*/inputText(productForm("model"), '_label -> "Model", 'class -> "form-control")),format.raw/*14.87*/("""
         """),_display_(/*15.10*/inputText(productForm("year"), '_label -> "Year", 'class -> "form-control")),format.raw/*15.85*/("""
-        """),_display_(/*16.10*/inputText(productForm("fuel_type"), '_label -> "Fuel Type", 'class -> "form-control")),format.raw/*16.95*/("""
+        """),_display_(/*16.10*/inputText(productForm("fuelType"), '_label -> "Fuel Type", 'class -> "form-control")),format.raw/*16.94*/("""
         """),_display_(/*17.10*/inputText(productForm("price"), '_label -> "Price", 'class -> "form-control")),format.raw/*17.87*/("""
         """),_display_(/*18.10*/inputText(productForm("colour"), '_label -> "Colour", 'class -> "form-control")),format.raw/*18.89*/("""
 
@@ -76,10 +76,10 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 22 12:21:05 GMT 2019
+                  DATE: Sun Mar 24 20:49:23 GMT 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/addProduct.scala.html
-                  HASH: 687b95fdc43a1c7f6fee17c0a0787d6e08b6923a
-                  MATRIX: 985->1|1118->64|1162->62|1189->80|1216->82|1249->107|1287->108|1318->113|1387->157|1558->320|1597->322|1643->341|1656->345|1687->355|1725->366|1821->441|1858->451|1956->528|1993->538|2089->613|2126->623|2232->708|2269->718|2367->795|2404->805|2504->884|2541->894|2675->1001|2760->1065|2797->1075|2953->1204|2968->1210|3015->1236|3163->1354
+                  HASH: d3d090ff94fe47147e6c92714ff03e8d4dd9caa9
+                  MATRIX: 985->1|1118->64|1162->62|1189->80|1216->82|1249->107|1287->108|1318->113|1387->157|1558->320|1597->322|1643->341|1656->345|1687->355|1725->366|1821->441|1858->451|1956->528|1993->538|2089->613|2126->623|2231->707|2268->717|2366->794|2403->804|2503->883|2540->893|2674->1000|2759->1064|2796->1074|2952->1203|2967->1209|3014->1235|3162->1353
                   LINES: 28->1|31->3|34->2|35->4|36->5|36->5|36->5|37->6|39->8|40->9|40->9|42->11|42->11|42->11|44->13|44->13|45->14|45->14|46->15|46->15|47->16|47->16|48->17|48->17|49->18|49->18|51->20|54->23|54->23|56->25|58->27|58->27|58->27|62->31
                   -- GENERATED --
               */

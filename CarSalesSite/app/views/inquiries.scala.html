@@ -9,7 +9,6 @@
 		<thead>
 			<!-- The header row-->
 			<tr>
-				<th>ID</th>
 				<th>Full Name</th>
 				<th>Email Address</th>
 				<th>Phone Number</th>
@@ -21,7 +20,6 @@
 			<!-- Product rows -->
 			@for(Inquiries <- inquiryList) {
 			<tr scope="row">
-				<td>@Inquiries.getId</td>
 				<td>@Inquiries.getFullName</td>	
 				<td>@Inquiries.getEmail</td>
 				<td>@Inquiries.getPhoneNumber</td>
