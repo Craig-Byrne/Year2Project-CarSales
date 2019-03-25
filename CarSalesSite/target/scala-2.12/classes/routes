@@ -31,6 +31,9 @@ GET     /inquirySubmit                    controllers.HomeController.inquirySubm
 
 GET     /inquiries                        controllers.HomeController.inquiries
 
+GET     /register                         controllers.HomeController.register
+
+POST    /registerSubmit                   controllers.HomeController.registerSubmit
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

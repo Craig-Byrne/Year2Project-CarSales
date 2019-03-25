@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Sun Mar 24 19:55:42 GMT 2019
+// @DATE:Mon Mar 25 11:23:04 GMT 2019
 
 package router
 
@@ -22,7 +22,7 @@ class Routes(
   AsyncController_2: controllers.AsyncController,
   // @LINE:22
   LoginController_4: controllers.LoginController,
-  // @LINE:36
+  // @LINE:39
   Assets_3: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -37,7 +37,7 @@ class Routes(
     AsyncController_2: controllers.AsyncController,
     // @LINE:22
     LoginController_4: controllers.LoginController,
-    // @LINE:36
+    // @LINE:39
     Assets_3: controllers.Assets
   ) = this(errorHandler, HomeController_1, CountController_0, AsyncController_2, LoginController_4, Assets_3, "/")
 
@@ -65,6 +65,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """contactUs""", """controllers.HomeController.contactUs"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """inquirySubmit""", """controllers.HomeController.inquirySubmit"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """inquiries""", """controllers.HomeController.inquiries"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """register""", """controllers.HomeController.register"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """registerSubmit""", """controllers.HomeController.registerSubmit"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -325,11 +327,47 @@ class Routes(
     )
   )
 
+  // @LINE:34
+  private[this] lazy val controllers_HomeController_register14_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("register")))
+  )
+  private[this] lazy val controllers_HomeController_register14_invoker = createInvoker(
+    HomeController_1.register,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "register",
+      Nil,
+      "GET",
+      this.prefix + """register""",
+      """""",
+      Seq()
+    )
+  )
+
   // @LINE:36
-  private[this] lazy val controllers_Assets_versioned14_route = Route("GET",
+  private[this] lazy val controllers_HomeController_registerSubmit15_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("registerSubmit")))
+  )
+  private[this] lazy val controllers_HomeController_registerSubmit15_invoker = createInvoker(
+    HomeController_1.registerSubmit,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "registerSubmit",
+      Nil,
+      "POST",
+      this.prefix + """registerSubmit""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:39
+  private[this] lazy val controllers_Assets_versioned16_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned14_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned16_invoker = createInvoker(
     Assets_3.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -430,10 +468,22 @@ class Routes(
         controllers_HomeController_inquiries13_invoker.call(HomeController_1.inquiries)
       }
   
+    // @LINE:34
+    case controllers_HomeController_register14_route(params@_) =>
+      call { 
+        controllers_HomeController_register14_invoker.call(HomeController_1.register)
+      }
+  
     // @LINE:36
-    case controllers_Assets_versioned14_route(params@_) =>
+    case controllers_HomeController_registerSubmit15_route(params@_) =>
+      call { 
+        controllers_HomeController_registerSubmit15_invoker.call(HomeController_1.registerSubmit)
+      }
+  
+    // @LINE:39
+    case controllers_Assets_versioned16_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned14_invoker.call(Assets_3.versioned(path, file))
+        controllers_Assets_versioned16_invoker.call(Assets_3.versioned(path, file))
       }
   }
 }

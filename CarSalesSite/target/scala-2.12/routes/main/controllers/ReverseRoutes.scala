@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Sun Mar 24 19:55:42 GMT 2019
+// @DATE:Mon Mar 25 11:23:04 GMT 2019
 
 import play.api.mvc.Call
 
@@ -11,14 +11,14 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:36
+  // @LINE:39
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:36
+    // @LINE:39
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
@@ -84,6 +84,12 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "updateProduct/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
+    // @LINE:34
+    def register(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "register")
+    }
+  
     // @LINE:14
     def addProduct(): Call = {
       
@@ -94,6 +100,12 @@ package controllers {
     def inquiries(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "inquiries")
+    }
+  
+    // @LINE:36
+    def registerSubmit(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "registerSubmit")
     }
   
     // @LINE:6

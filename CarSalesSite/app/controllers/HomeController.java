@@ -131,6 +131,24 @@ public class HomeController extends Controller {
         }
     }
 
+    public Result register() {
+        Form<User> registerForm = formFactory.form(User.class);
+        return ok(register.render(registerForm, User.getUserById(session().get("email"))));
+    }
+
+    public Result registerSubmit() {
+        Form<User> registerForm = formFactory.form(User.class).bindFromRequest();
+        if (registerForm.hasErrors()) {
+            return badRequest(register.render(registerForm, User.getUserById(session().get("email"))));
+        } else {
+             User register = registerForm.get();
+             register.save();
+             flash("success", "User was added.");
+             return redirect(controllers.routes.HomeController.register());
+        }
+    }            
+
+
     public String saveFile(Long id, FilePart<File> uploaded) {
         if (uploaded != null) {
 
@@ -175,5 +193,6 @@ public class HomeController extends Controller {
         return "/ no image file.";
     }
 }
+
 
 
