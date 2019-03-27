@@ -1,1 +1,3 @@
-[0m[[0m[31merror[0m] [0m[0m[Error] /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/contactUs.scala.html:27: Expected '}' but found 'EOF'[0m
+[0m[[0m[31merror[0m] [0m[0m[Error] /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/admin.scala.html:11[0m
+[0m[[0m[31merror[0m] [0m[0m	</p>: Expected '}' but found 'EOF'[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mtwirlCompileTemplates[0m) Twirl compilation failed[0m

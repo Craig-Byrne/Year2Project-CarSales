@@ -50,6 +50,39 @@ public class HomeController extends Controller {
     }
 
     @With(AuthAdmin.class)
+    public Result admin() {
+        return ok(admin.render(User.getUserById(session().get("email"))));
+    }
+
+    public Result users(){
+        List<User> userList = User.find.all();
+        return ok(users.render(userList, e, User.getUserById(session().get("email"))));
+    }
+
+    public Result addUser(){
+        Form<User> newUserForm = formFactory.form(User.class);
+        return ok(addUser.render(newUserForm, User.getUserById(session().get("email"))));
+    }
+
+    @With(AuthAdmin.class)
+    public Result addUserSubmit(){
+            Form<User> newUserForm = formFactory.form(User.class).bindFromRequest();
+            if (newUserForm.hasErrors()) {
+                return badRequest(addUser.render(newUserForm, User.getUserById(session().get("email"))));
+            } else {
+                User newUser = newUserForm.get();
+                if (newUser.getEmail() == null) {
+                    newUser.save();
+                } else {
+                    newUser.update();
+                }
+                flash("success", "User " + newUser.getName() + " was added/updated.");
+                return redirect(controllers.routes.HomeController.users());
+            }
+        
+        }
+
+    @With(AuthAdmin.class)
     public Result inquiries(){
         List<Inquiries> inquiryList = Inquiries.find.all();
         return ok(inquiries.render(inquiryList, e, User.getUserById(session().get("email"))));

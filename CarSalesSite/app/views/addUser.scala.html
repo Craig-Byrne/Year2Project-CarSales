@@ -1,0 +1,25 @@
+@(newUserForm: Form[models.users.User], user: models.users.User)
+
+@import helper._
+
+@main("Add User", user){
+    <p class="lead">Add a new user</p>
+
+    @form(action=routes.HomeController.addUserSubmit(), 'class -> "form-horizontal", 'role -> "form",
+          'method -> "POST", 'enctype -> "multipart/form-data") {
+        
+        @CSRF.formField
+
+        @inputText(newUserForm("name"), '_label -> "Full Name", 'class -> "form-control")
+        @inputText(newUserForm("role"), '_label -> "Role", 'class -> "form-control")
+        @inputText(newUserForm("email"), '_label -> "Email Address", 'class -> "form-control")
+        @inputText(newUserForm("password"), '_label -> "Password", 'class -> "form-control")
+
+        <div class="actions">
+            <input type="submit" value="Add/Update user" class="btn btn-primary">
+            <a href="@routes.HomeController.users()">
+                <button type="button" class="btn btn-warning">Cancel</button>
+            </a>
+        </div>
+    }
+}

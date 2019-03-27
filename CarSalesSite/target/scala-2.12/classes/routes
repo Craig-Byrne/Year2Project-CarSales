@@ -35,6 +35,16 @@ GET     /register                         controllers.HomeController.register
 
 POST    /registerSubmit                   controllers.HomeController.registerSubmit
 
+GET     /admin                            controllers.HomeController.admin
+
+GET     /users                            controllers.HomeController.users
+
+GET     /addUser                          controllers.HomeController.addUser
+
+POST    /addUserSubmit                controllers.HomeController.addUserSubmit
+
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 

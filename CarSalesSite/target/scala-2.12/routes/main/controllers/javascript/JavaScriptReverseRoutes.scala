@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Tue Mar 26 17:06:00 GMT 2019
+// @DATE:Wed Mar 27 00:19:31 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:39
+  // @LINE:49
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:39
+    // @LINE:49
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -79,6 +79,26 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:42
+    def addUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addUser",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addUser"})
+        }
+      """
+    )
+  
+    // @LINE:38
+    def admin: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.admin",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "admin"})
+        }
+      """
+    )
+  
     // @LINE:30
     def inquirySubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.inquirySubmit",
@@ -115,6 +135,26 @@ package controllers.javascript {
       """
         function(id0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "updateProduct/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:44
+    def addUserSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addUserSubmit",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addUserSubmit"})
+        }
+      """
+    )
+  
+    // @LINE:40
+    def users: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.users",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users"})
         }
       """
     )
