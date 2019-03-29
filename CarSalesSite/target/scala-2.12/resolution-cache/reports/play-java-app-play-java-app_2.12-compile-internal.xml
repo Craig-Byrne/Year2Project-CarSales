@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, universal, universal-docs, universal-src, windows, docker, linux, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, docs"
-		date="20190328234737"/>
+		date="20190329105033"/>
 	<dependencies>
 		<module organisation="org.imgscalr" name="imgscalr-lib">
 			<revision name="4.2" status="release" pubdate="20120111195930" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.thebuzzmedia.com/software/imgscalr-java-image-scaling-library/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="104">
@@ -864,7 +864,7 @@
 				<caller organisation="com.typesafe.play" name="play_2.12" conf="compile, runtime" rev="1.10" rev-constraint-default="1.10" rev-constraint-dynamic="1.10" callerrev="2.6.13"/>
 				<artifacts>
 					<artifact name="commons-codec" type="jar" ext="jar" status="no" details="" size="284184" time="0" location="/home/wdd/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar">
-						<origin-location is-local="false" location="UNKNOWN"/>
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

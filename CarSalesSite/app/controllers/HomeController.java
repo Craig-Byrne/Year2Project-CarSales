@@ -14,6 +14,7 @@ import play.data.*;
 import views.html.*;
 import models.users.*;
 import models.Inquiries;
+import models.Reviews;
 
 import play.mvc.Http.*;
 import play.mvc.Http.MultipartFormData.FilePart;
@@ -100,6 +101,18 @@ public class HomeController extends Controller {
         return redirect(controllers.routes.HomeController.inquiries());
     }
 
+    public Result reviews(){
+        List<Reviews> reviewList = Reviews.find.all();
+        return ok(reviews.render(reviewList, e, User.getUserById(session().get("email"))));
+    }
+    
+    @With(AuthAdmin.class)
+    public Result deleteReview(Long id){
+        Reviews.find.ref(id).delete();
+        flash("success", "Review has been deleted.");
+        return redirect(controllers.routes.HomeController.reviews());
+    }
+
     @With(AuthAdmin.class)
     public Result addProduct(){
         Form<Product> productForm = formFactory.form(Product.class);
@@ -175,6 +188,30 @@ public class HomeController extends Controller {
             return redirect(controllers.routes.HomeController.contactUs());
         }
     }
+
+    public Result addReview(){
+            Form<Reviews> reviewForm = formFactory.form(Reviews.class);
+        return ok(addReview.render(reviewForm, User.getUserById(session().get("email")))); 
+    }  
+
+    public Result addReviewSubmit(){
+        Form<Reviews> newReviewForm = formFactory.form(Reviews.class).bindFromRequest();
+
+    if (newReviewForm.hasErrors()){
+        return badRequest(addReview.render(newReviewForm, User.getUserById(session().get("email"))));
+    } else {
+        Reviews newReview = newReviewForm.get();
+        if (newReview.getId() == null){
+            newReview.save();
+        } else {
+            newReview.update();
+        }
+
+        newReview.save();
+        flash("Success", "Review " + newReview.getFullName() + " was added ");
+        return redirect(controllers.routes.HomeController.addReview());
+    }
+}
 
     public Result register() {
         Form<User> registerForm = formFactory.form(User.class);

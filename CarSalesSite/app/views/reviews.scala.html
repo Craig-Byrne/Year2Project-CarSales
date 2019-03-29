@@ -1,0 +1,38 @@
+@import play.api.Environment
+@(reviewList: List[models.Reviews], env: play.api.Environment, user: models.users.User)
+
+@main("Reviews", user){
+    <h1>Reviews</h1>
+    
+    <table class="table table-bordered table-striped">
+		<thead>
+			<!-- The header row-->
+			<tr>
+				<th>Full Name</th>
+				<th>Email Address</th>
+				<th>Review</th>
+			</tr>
+        </thead>
+        
+        <tbody>
+			<!-- Product rows -->
+			@for(Reviews <- reviewList) {
+			<tr scope="row">
+				<td>@Reviews.getFullName</td>	
+				<td>@Reviews.getEmail</td>
+				<td>@Reviews.getReview</td>
+				<td>
+					<a href="@routes.HomeController.deleteReview(Reviews.getId)" class="button-xs btn-danger" onclick="return confirmDel();">
+						<span class="glyphicon glyphicon-trash"></span>
+					</a>
+				</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p>
+    <a href="@routes.HomeController.addReview()">
+        <button class="btn btn-primary">Add your review</button>
+    </a>
+</p>
+}

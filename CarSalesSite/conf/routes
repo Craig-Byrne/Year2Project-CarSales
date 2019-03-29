@@ -47,7 +47,13 @@ POST    /addUserSubmit                controllers.HomeController.addUserSubmit
 
 GET     /deleteUser/:id               controllers.HomeController.deleteUser(id: Long)
 
+GET     /reviews                     controllers.HomeController.reviews
 
+GET     /addReview                     controllers.HomeController.addReview
+
+POST    /addReviewSubmit                controllers.HomeController.addReviewSubmit
+
+GET     /deleteReview/:id               controllers.HomeController.deleteReview(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

@@ -1,0 +1,25 @@
+@(reviewForm: Form[models.Reviews], user: models.users.User)
+@import helper._
+
+@main("Add a review", user){
+	<h1>Reviews</h1>
+
+	@form(action=routes.HomeController.addReviewSubmit(), 'class -> "form-horizontal", 'role -> "form",
+          'method -> "POST", 'enctype -> "multipart/form-data") {
+
+		  @CSRF.formField
+
+	@inputText(reviewForm("fullName"), '_label -> "Full Name", 'class -> "form-control")
+	@inputText(reviewForm("email"), '_label -> "Email Address", 'class -> "form-control")
+	@inputText(reviewForm("review"), '_label -> "Leave a review here", 'class -> "form-control")
+
+	@inputText(reviewForm("id"), '_label -> "", 'hidden -> "hidden")
+
+	<div class="actions">
+		<input type="submit" value="Submit review" class="btn btn-primary">
+		<a href="@routes.HomeController.reviews()">
+			<button type="button" class="btn btn-warning">Cancel</button>
+		</a>
+	</div>
+}
+}

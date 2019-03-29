@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Fri Mar 29 00:35:36 GMT 2019
+// @DATE:Fri Mar 29 13:14:55 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:53
+  // @LINE:59
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:53
+    // @LINE:59
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -149,6 +149,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:56
+    def deleteReview: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.deleteReview",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteReview/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
     // @LINE:20
     def updateProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.updateProduct",
@@ -219,12 +229,42 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:50
+    def reviews: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.reviews",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "reviews"})
+        }
+      """
+    )
+  
+    // @LINE:54
+    def addReviewSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addReviewSubmit",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addReviewSubmit"})
+        }
+      """
+    )
+  
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + """"})
+        }
+      """
+    )
+  
+    // @LINE:52
+    def addReview: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addReview",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addReview"})
         }
       """
     )

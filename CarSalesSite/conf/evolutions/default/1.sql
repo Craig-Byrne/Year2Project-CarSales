@@ -45,6 +45,14 @@ create table product (
   constraint pk_product primary key (id)
 );
 
+create table reviews (
+  id                            bigint auto_increment not null,
+  full_name                     varchar(255),
+  email                         varchar(255),
+  review                        varchar(255),
+  constraint pk_reviews primary key (id)
+);
+
 create table user (
   id                            bigint auto_increment not null,
   email                         varchar(255),
@@ -64,6 +72,8 @@ drop table if exists inquiries;
 drop table if exists item_on_sale;
 
 drop table if exists product;
+
+drop table if exists reviews;
 
 drop table if exists user;
 
