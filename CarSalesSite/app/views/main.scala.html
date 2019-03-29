@@ -33,8 +33,6 @@
 					<a href="@routes.LoginController.login()">Log In</a>
 				}
 			</li>
-			<li @if(title == "Inquiries"){class="active"}><a href="@routes.HomeController.inquiries()">Inquiries</a></li>
-			<li @if(title == "Register"){class="active"}><a href="@routes.HomeController.register()">Register</a></li>
 			<li @if(title == "Admin"){class="active"}><a href="@routes.HomeController.admin()">Admin</a></li>
 		</ul>
 	    </div>
@@ -54,14 +52,6 @@
                 @content
 		    </div>
 		</div>
-		<div class="col-sm-3">
-		    <div class="well sidecol">
-			<h2>Events</h2>
-			<h3>The 153rd Meet for Real event</h3>
-			<p>The popular <span class="redtext">Meet for Real</span> event takes place this Sunday at the Square Park, from 7am until 1pm. It will yet again give flea-market enthusiasts a chance to engage in a bit of live bartering and banter with their fellow sitesters.</p>
-		    </div>
-		</div>
-	    </div>
 	    <div class="row">
 		<div class="col-sm-12">
 		    <div class="well footer">

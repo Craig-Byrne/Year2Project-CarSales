@@ -3,7 +3,6 @@
 
 @main("Login", user) {
     <h3>Sign in</h3>
-    <!-- Display login errors if there are any-->
     @if(loginForm.hasGlobalErrors) {
         <p class="alert alert-warning">
             @for(e <- loginForm.globalErrors) {
@@ -11,17 +10,14 @@
             }
         </p>
     }
-	@* Display error message from flash, if it is set *@
 	@if(flash.containsKey("error")) {
 		<div class="alert alert-success">
 			@flash.get("error")
 		</div>
 	}
-    <!-- The login form-->
+    
+
     @helper.form(action = controllers.routes.LoginController.loginSubmit()) {
-        @* CSRF attack prevention *@
-        @* This token, sent by the controller, will be used to authenticate 
-           the form submission as a means of avoiding cross-site request forgery *@
         @CSRF.formField
         
         <div class="form-group">
@@ -36,5 +32,12 @@
         <div class="form-group">
             <input type="submit" value="Sign In" class="btn btn-primary">
         </div>
-    } @* End of form *@
+    }
+
+    <p>
+        Not have an account? Why not register one now!
+		<a href="@routes.HomeController.register()">
+			<button class="btn btn-primary">Register</button>
+		</a>
+	</p>
 }                    

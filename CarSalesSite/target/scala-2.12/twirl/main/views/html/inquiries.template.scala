@@ -44,20 +44,26 @@ Seq[Any](format.raw/*4.1*/("""
 				<th>Email Address</th>
 				<th>Phone Number</th>
 				<th>Inquiry</th>
+				<th>Delete</th>
 			</tr>
         </thead>
         
         <tbody>
 			<!-- Product rows -->
-			"""),_display_(/*21.5*/for(Inquiries <- inquiryList) yield /*21.34*/ {_display_(Seq[Any](format.raw/*21.36*/("""
-			"""),format.raw/*22.4*/("""<tr scope="row">
-				<td>"""),_display_(/*23.10*/Inquiries/*23.19*/.getFullName),format.raw/*23.31*/("""</td>	
-				<td>"""),_display_(/*24.10*/Inquiries/*24.19*/.getEmail),format.raw/*24.28*/("""</td>
-				<td>"""),_display_(/*25.10*/Inquiries/*25.19*/.getPhoneNumber),format.raw/*25.34*/("""</td>
-				<td>"""),_display_(/*26.10*/Inquiries/*26.19*/.getInquiry),format.raw/*26.30*/("""</td>
+			"""),_display_(/*22.5*/for(Inquiries <- inquiryList) yield /*22.34*/ {_display_(Seq[Any](format.raw/*22.36*/("""
+			"""),format.raw/*23.4*/("""<tr scope="row">
+				<td>"""),_display_(/*24.10*/Inquiries/*24.19*/.getFullName),format.raw/*24.31*/("""</td>	
+				<td>"""),_display_(/*25.10*/Inquiries/*25.19*/.getEmail),format.raw/*25.28*/("""</td>
+				<td>"""),_display_(/*26.10*/Inquiries/*26.19*/.getPhoneNumber),format.raw/*26.34*/("""</td>
+				<td>"""),_display_(/*27.10*/Inquiries/*27.19*/.getInquiry),format.raw/*27.30*/("""</td>
+				<td>
+						<a href=""""),_display_(/*29.17*/routes/*29.23*/.HomeController.deleteInquiry(Inquiries.getId)),format.raw/*29.69*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
+							<span class="glyphicon glyphicon-trash"></span>
+						</a>
+					</td>
             </tr>
-        """)))}),format.raw/*28.10*/("""
-    """),format.raw/*29.5*/("""</tbody>
+        """)))}),format.raw/*34.10*/("""
+    """),format.raw/*35.5*/("""</tbody>
 </table>
 """)))}))
       }
@@ -75,11 +81,11 @@ Seq[Any](format.raw/*4.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 24 20:47:49 GMT 2019
+                  DATE: Fri Mar 29 00:38:55 GMT 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/inquiries.scala.html
-                  HASH: 781ae2ed2d35e200a243292d3eca685db3ecbcd9
-                  MATRIX: 651->1|682->26|1066->55|1242->138|1269->140|1300->163|1338->164|1369->169|1695->469|1740->498|1780->500|1811->504|1864->530|1882->539|1915->551|1958->567|1976->576|2006->585|2048->600|2066->609|2102->624|2144->639|2162->648|2194->659|2258->692|2290->697
-                  LINES: 24->1|25->2|30->3|35->4|36->5|36->5|36->5|37->6|52->21|52->21|52->21|53->22|54->23|54->23|54->23|55->24|55->24|55->24|56->25|56->25|56->25|57->26|57->26|57->26|59->28|60->29
+                  HASH: 6020fdd3460580650cf50d8bfc27999d81276df0
+                  MATRIX: 651->1|682->26|1066->55|1242->138|1269->140|1300->163|1338->164|1369->169|1715->489|1760->518|1800->520|1831->524|1884->550|1902->559|1935->571|1978->587|1996->596|2026->605|2068->620|2086->629|2122->644|2164->659|2182->668|2214->679|2272->710|2287->716|2354->762|2552->929|2584->934
+                  LINES: 24->1|25->2|30->3|35->4|36->5|36->5|36->5|37->6|53->22|53->22|53->22|54->23|55->24|55->24|55->24|56->25|56->25|56->25|57->26|57->26|57->26|58->27|58->27|58->27|60->29|60->29|60->29|65->34|66->35
                   -- GENERATED --
               */
           

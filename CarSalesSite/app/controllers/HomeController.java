@@ -76,16 +76,28 @@ public class HomeController extends Controller {
                 } else {
                     newUser.update();
                 }
-                flash("success", "User " + newUser.getName() + " was added/updated.");
+                flash("success", "User " + newUser.getName() + " was added.");
                 return redirect(controllers.routes.HomeController.users());
             }
         
+        }
+
+        public Result deleteUser(Long id){
+            User.find.ref(id).delete();
+            flash("success", "User has been deleted.");
+            return redirect(controllers.routes.HomeController.users());
         }
 
     @With(AuthAdmin.class)
     public Result inquiries(){
         List<Inquiries> inquiryList = Inquiries.find.all();
         return ok(inquiries.render(inquiryList, e, User.getUserById(session().get("email"))));
+    }
+
+    public Result deleteInquiry(Long id){
+        Inquiries.find.ref(id).delete();
+        flash("success", "Inquiry has been deleted.");
+        return redirect(controllers.routes.HomeController.inquiries());
     }
 
     @With(AuthAdmin.class)

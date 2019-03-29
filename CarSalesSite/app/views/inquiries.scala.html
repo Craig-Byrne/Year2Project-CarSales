@@ -13,6 +13,7 @@
 				<th>Email Address</th>
 				<th>Phone Number</th>
 				<th>Inquiry</th>
+				<th>Delete</th>
 			</tr>
         </thead>
         
@@ -24,6 +25,11 @@
 				<td>@Inquiries.getEmail</td>
 				<td>@Inquiries.getPhoneNumber</td>
 				<td>@Inquiries.getInquiry</td>
+				<td>
+						<a href="@routes.HomeController.deleteInquiry(Inquiries.getId)" class="button-xs btn-danger" onclick="return confirmDel();">
+							<span class="glyphicon glyphicon-trash"></span>
+						</a>
+					</td>
             </tr>
         }
     </tbody>

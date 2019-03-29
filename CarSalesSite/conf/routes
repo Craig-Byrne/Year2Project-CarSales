@@ -27,9 +27,11 @@ GET     /logout                     controllers.LoginController.logout
 
 GET     /contactUs                    controllers.HomeController.contactUs
 
-GET     /inquirySubmit                    controllers.HomeController.inquirySubmit
+POST     /inquirySubmit                    controllers.HomeController.inquirySubmit
 
 GET     /inquiries                        controllers.HomeController.inquiries
+
+GET     /deleteInquiry/:id               controllers.HomeController.deleteInquiry(id: Long)
 
 GET     /register                         controllers.HomeController.register
 
@@ -42,6 +44,8 @@ GET     /users                            controllers.HomeController.users
 GET     /addUser                          controllers.HomeController.addUser
 
 POST    /addUserSubmit                controllers.HomeController.addUserSubmit
+
+GET     /deleteUser/:id               controllers.HomeController.deleteUser(id: Long)
 
 
 

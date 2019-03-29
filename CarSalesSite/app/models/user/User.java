@@ -9,6 +9,8 @@ import play.data.validation.*;
 @Entity
 public class User extends Model {
     @Id
+    private Long id;
+
     private String email;
 
     @Constraints.Required
@@ -42,11 +44,20 @@ public class User extends Model {
 
     }
 
-    public User(String email, String role, String name, String password) {
+    public User(Long id, String email, String role, String name, String password) {
+        this.id = id;
         this.email = email;
         this.role = role;
         this.name = name;
         this.password = password;
+    }
+
+    public Long getId(){
+        return id;
+    }
+
+    public void setId(Long id){
+        this.id = id;
     }
 
     public String getEmail() {

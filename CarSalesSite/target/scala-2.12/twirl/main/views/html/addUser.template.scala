@@ -47,7 +47,7 @@ Seq[Any](format.raw/*2.1*/("""
         """),_display_(/*16.10*/inputText(newUserForm("password"), '_label -> "Password", 'class -> "form-control")),format.raw/*16.93*/("""
 
         """),format.raw/*18.9*/("""<div class="actions">
-            <input type="submit" value="Add/Update user" class="btn btn-primary">
+            <input type="submit" value="Add user" class="btn btn-primary">
             <a href=""""),_display_(/*20.23*/routes/*20.29*/.HomeController.users()),format.raw/*20.52*/("""">
                 <button type="button" class="btn btn-warning">Cancel</button>
             </a>
@@ -69,10 +69,10 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 26 23:49:53 GMT 2019
+                  DATE: Fri Mar 29 01:27:50 GMT 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/addUser.scala.html
-                  HASH: c0ad98fc28b83b2fe0d9fca4c7c79be96572e1cc
-                  MATRIX: 985->1|1121->67|1165->65|1192->83|1219->85|1249->107|1287->108|1318->113|1384->154|1552->314|1591->316|1637->335|1650->339|1681->349|1719->360|1820->440|1857->450|1953->525|1990->535|2096->620|2133->630|2237->713|2274->723|2427->849|2442->855|2486->878|2634->996
+                  HASH: 65fb976c490d0521eb856b5d13483a5e56b136dd
+                  MATRIX: 985->1|1121->67|1165->65|1192->83|1219->85|1249->107|1287->108|1318->113|1384->154|1552->314|1591->316|1637->335|1650->339|1681->349|1719->360|1820->440|1857->450|1953->525|1990->535|2096->620|2133->630|2237->713|2274->723|2420->842|2435->848|2479->871|2627->989
                   LINES: 28->1|31->3|34->2|35->4|36->5|36->5|36->5|37->6|39->8|40->9|40->9|42->11|42->11|42->11|44->13|44->13|45->14|45->14|46->15|46->15|47->16|47->16|49->18|51->20|51->20|51->20|55->24
                   -- GENERATED --
               */

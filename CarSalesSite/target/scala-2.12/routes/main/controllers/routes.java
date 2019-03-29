@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Wed Mar 27 00:19:31 GMT 2019
+// @DATE:Fri Mar 29 00:35:36 GMT 2019
 
 package controllers;
 
