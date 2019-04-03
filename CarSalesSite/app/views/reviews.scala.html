@@ -9,8 +9,9 @@
 			<!-- The header row-->
 			<tr>
 				<th>Full Name</th>
-				<th>Email Address</th>
+				<th>Rating Out Of 5</th>
 				<th>Review</th>
+				<th>Delete</th>
 			</tr>
         </thead>
         
@@ -19,8 +20,8 @@
 			@for(Reviews <- reviewList) {
 			<tr scope="row">
 				<td>@Reviews.getFullName</td>	
-				<td>@Reviews.getEmail</td>
-				<td>@Reviews.getReview</td>
+				<td>@Reviews.getRating</td>
+				<td>@Reviews.getComment</td>
 				<td>
 					<a href="@routes.HomeController.deleteReview(Reviews.getId)" class="button-xs btn-danger" onclick="return confirmDel();">
 						<span class="glyphicon glyphicon-trash"></span>

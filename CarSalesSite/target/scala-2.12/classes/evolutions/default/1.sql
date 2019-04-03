@@ -48,8 +48,8 @@ create table product (
 create table reviews (
   id                            bigint auto_increment not null,
   full_name                     varchar(255),
-  email                         varchar(255),
-  review                        varchar(255),
+  rating                        integer not null,
+  comment                       varchar(255),
   constraint pk_reviews primary key (id)
 );
 

@@ -41,8 +41,8 @@ Seq[Any](format.raw/*3.1*/("""
 		  """),_display_(/*10.6*/CSRF/*10.10*/.formField),format.raw/*10.20*/("""
 
 	"""),_display_(/*12.3*/inputText(reviewForm("fullName"), '_label -> "Full Name", 'class -> "form-control")),format.raw/*12.86*/("""
-	"""),_display_(/*13.3*/inputText(reviewForm("email"), '_label -> "Email Address", 'class -> "form-control")),format.raw/*13.87*/("""
-	"""),_display_(/*14.3*/inputText(reviewForm("review"), '_label -> "Leave a review here", 'class -> "form-control")),format.raw/*14.94*/("""
+	"""),_display_(/*13.3*/inputText(reviewForm("rating"), '_label -> "Rating Out of 5", 'class -> "form-control")),format.raw/*13.90*/("""
+	"""),_display_(/*14.3*/inputText(reviewForm("comment"), '_label -> "Comment", 'class -> "form-control")),format.raw/*14.83*/("""
 
 	"""),_display_(/*16.3*/inputText(reviewForm("id"), '_label -> "", 'hidden -> "hidden")),format.raw/*16.66*/("""
 
@@ -69,10 +69,10 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 29 11:47:52 GMT 2019
+                  DATE: Sat Mar 30 23:38:39 GMT 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/addReview.scala.html
-                  HASH: 93912cd02ac7717a029392c5babfebcc2c80e973
-                  MATRIX: 984->1|1116->62|1160->78|1187->80|1221->106|1259->107|1287->109|1332->129|1502->291|1541->293|1574->300|1587->304|1618->314|1648->318|1752->401|1781->404|1886->488|1915->491|2027->582|2057->586|2141->649|2171->652|2302->756|2317->762|2363->787|2477->871
+                  HASH: a6f5cc9404581dace2b366d9e72b2fffd1619b7a
+                  MATRIX: 984->1|1116->62|1160->78|1187->80|1221->106|1259->107|1287->109|1332->129|1502->291|1541->293|1574->300|1587->304|1618->314|1648->318|1752->401|1781->404|1889->491|1918->494|2019->574|2049->578|2133->641|2163->644|2294->748|2309->754|2355->779|2469->863
                   LINES: 28->1|31->2|34->3|35->4|35->4|35->4|36->5|38->7|39->8|39->8|41->10|41->10|41->10|43->12|43->12|44->13|44->13|45->14|45->14|47->16|47->16|49->18|51->20|51->20|51->20|55->24
                   -- GENERATED --
               */

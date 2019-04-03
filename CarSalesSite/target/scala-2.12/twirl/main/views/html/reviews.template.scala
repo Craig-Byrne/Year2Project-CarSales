@@ -40,29 +40,30 @@ Seq[Any](format.raw/*3.1*/("""
 			<!-- The header row-->
 			<tr>
 				<th>Full Name</th>
-				<th>Email Address</th>
+				<th>Rating Out Of 5</th>
 				<th>Review</th>
+				<th>Delete</th>
 			</tr>
         </thead>
         
         <tbody>
 			<!-- Product rows -->
-			"""),_display_(/*19.5*/for(Reviews <- reviewList) yield /*19.31*/ {_display_(Seq[Any](format.raw/*19.33*/("""
-			"""),format.raw/*20.4*/("""<tr scope="row">
-				<td>"""),_display_(/*21.10*/Reviews/*21.17*/.getFullName),format.raw/*21.29*/("""</td>	
-				<td>"""),_display_(/*22.10*/Reviews/*22.17*/.getEmail),format.raw/*22.26*/("""</td>
-				<td>"""),_display_(/*23.10*/Reviews/*23.17*/.getReview),format.raw/*23.27*/("""</td>
+			"""),_display_(/*20.5*/for(Reviews <- reviewList) yield /*20.31*/ {_display_(Seq[Any](format.raw/*20.33*/("""
+			"""),format.raw/*21.4*/("""<tr scope="row">
+				<td>"""),_display_(/*22.10*/Reviews/*22.17*/.getFullName),format.raw/*22.29*/("""</td>	
+				<td>"""),_display_(/*23.10*/Reviews/*23.17*/.getRating),format.raw/*23.27*/("""</td>
+				<td>"""),_display_(/*24.10*/Reviews/*24.17*/.getComment),format.raw/*24.28*/("""</td>
 				<td>
-					<a href=""""),_display_(/*25.16*/routes/*25.22*/.HomeController.deleteReview(Reviews.getId)),format.raw/*25.65*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
+					<a href=""""),_display_(/*26.16*/routes/*26.22*/.HomeController.deleteReview(Reviews.getId)),format.raw/*26.65*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
 						<span class="glyphicon glyphicon-trash"></span>
 					</a>
 				</td>
             </tr>
-        """)))}),format.raw/*30.10*/("""
-    """),format.raw/*31.5*/("""</tbody>
+        """)))}),format.raw/*31.10*/("""
+    """),format.raw/*32.5*/("""</tbody>
 </table>
 <p>
-    <a href=""""),_display_(/*34.15*/routes/*34.21*/.HomeController.addReview()),format.raw/*34.48*/("""">
+    <a href=""""),_display_(/*35.15*/routes/*35.21*/.HomeController.addReview()),format.raw/*35.48*/("""">
         <button class="btn btn-primary">Add your review</button>
     </a>
 </p>
@@ -82,11 +83,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 29 13:23:14 GMT 2019
+                  DATE: Sat Mar 30 23:35:32 GMT 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/reviews.scala.html
-                  HASH: 398c0141232d99d3f358ab9c010748fba7307136
-                  MATRIX: 651->1|1038->30|1218->117|1245->119|1274->140|1312->141|1343->146|1640->417|1682->443|1722->445|1753->449|1806->475|1822->482|1855->494|1898->510|1914->517|1944->526|1986->541|2002->548|2033->558|2090->588|2105->594|2169->637|2364->801|2396->806|2459->842|2474->848|2522->875
-                  LINES: 24->1|29->2|34->3|35->4|35->4|35->4|36->5|50->19|50->19|50->19|51->20|52->21|52->21|52->21|53->22|53->22|53->22|54->23|54->23|54->23|56->25|56->25|56->25|61->30|62->31|65->34|65->34|65->34
+                  HASH: ad096c62e4026ccc092101b72b3f6507b50bdc5b
+                  MATRIX: 651->1|1038->30|1218->117|1245->119|1274->140|1312->141|1343->146|1662->439|1704->465|1744->467|1775->471|1828->497|1844->504|1877->516|1920->532|1936->539|1967->549|2009->564|2025->571|2057->582|2114->612|2129->618|2193->661|2388->825|2420->830|2483->866|2498->872|2546->899
+                  LINES: 24->1|29->2|34->3|35->4|35->4|35->4|36->5|51->20|51->20|51->20|52->21|53->22|53->22|53->22|54->23|54->23|54->23|55->24|55->24|55->24|57->26|57->26|57->26|62->31|63->32|66->35|66->35|66->35
                   -- GENERATED --
               */
           

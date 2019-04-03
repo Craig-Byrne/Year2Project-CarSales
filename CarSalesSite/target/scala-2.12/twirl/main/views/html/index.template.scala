@@ -34,7 +34,17 @@ Seq[Any](format.raw/*1.27*/("""
 """),_display_(/*2.2*/main("Home", user)/*2.20*/{_display_(Seq[Any](format.raw/*2.21*/("""
 	"""),format.raw/*3.2*/("""<h1>Welcome to IrelandCarSales</h1>
 	<h3>Here you can buy second hand cars at a cheap price</h3>
-""")))}),format.raw/*5.2*/(""" 
+
+	<div class="container-fluid">
+			<div class="row">
+			<div class="col-sm-4">
+				<div class="well sidecol">
+				<h2>Services</h2>
+				<h3>Some of our current services include: </h3>
+				<p>New models being added to the website soon, stay tuned!!</p>
+				</div>
+			</div>
+""")))}),format.raw/*15.2*/(""" 
 
 
 """))
@@ -53,11 +63,11 @@ Seq[Any](format.raw/*1.27*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 22 12:19:09 GMT 2019
+                  DATE: Sun Mar 31 12:39:39 IST 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/index.scala.html
-                  HASH: e73d731ae316439c043b9f4eab8a373ee9634179
-                  MATRIX: 959->1|1079->26|1107->29|1133->47|1171->48|1200->51|1329->151
-                  LINES: 28->1|33->1|34->2|34->2|34->2|35->3|37->5
+                  HASH: e1cacb450c93977f31844093fb999e6b1f36da3e
+                  MATRIX: 959->1|1079->26|1107->29|1133->47|1171->48|1200->51|1613->434
+                  LINES: 28->1|33->1|34->2|34->2|34->2|35->3|47->15
                   -- GENERATED --
               */
           

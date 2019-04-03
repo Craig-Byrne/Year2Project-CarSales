@@ -15,15 +15,16 @@ public class Reviews extends Model {
 
     private String fullName;
 
-    private String email;
+    private int rating;
     
-    private String review;
+    private String comment;
 
-    public Reviews(Long id, String fullName, String email, String review) {
+
+    public Reviews(Long id, String fullName, int rating, String comment) {
         this.id = id;
         this.fullName = fullName;
-        this.email = email;
-        this.review = review;
+        this.rating = rating;
+        this.comment = comment;
     }
 
     public static Finder<Long,Reviews> find = new Finder<>(Reviews.class);
@@ -36,12 +37,12 @@ public class Reviews extends Model {
         return fullName;
     }
 
-    public String getEmail() {
-        return email;
+    public int getRating() {
+        return rating;
     }
 
-    public String getReview() {
-        return review;
+    public String getComment() {
+        return comment;
     }
 
     public void setId(Long id) {
@@ -52,11 +53,11 @@ public class Reviews extends Model {
         this.fullName = fullName;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
-    public void setReview(String review) {
-        this.review = review;
+    public void setComment(String comment) {
+        this.comment = comment;
     }    
 } 

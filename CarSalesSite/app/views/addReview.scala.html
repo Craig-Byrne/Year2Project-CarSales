@@ -10,8 +10,8 @@
 		  @CSRF.formField
 
 	@inputText(reviewForm("fullName"), '_label -> "Full Name", 'class -> "form-control")
-	@inputText(reviewForm("email"), '_label -> "Email Address", 'class -> "form-control")
-	@inputText(reviewForm("review"), '_label -> "Leave a review here", 'class -> "form-control")
+	@inputText(reviewForm("rating"), '_label -> "Rating Out of 5", 'class -> "form-control")
+	@inputText(reviewForm("comment"), '_label -> "Comment", 'class -> "form-control")
 
 	@inputText(reviewForm("id"), '_label -> "", 'hidden -> "hidden")
 

@@ -1,0 +1,27 @@
+.footer { 
+    font-weight: bold; 
+    color: blue;
+    text-align: center;
+}
+
+.sidecol { 
+    font-weight: bold;
+    background-color: steelblue; 
+}
+
+.sidecol h2 { 
+    font-weight: bold; 
+}
+
+.midcol h1{
+    text-align: center;
+}
+
+.navbar{
+    color: blue;
+}
+
+.midcol p{
+    text-align: center;
+}
+
