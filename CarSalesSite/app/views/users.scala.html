@@ -18,6 +18,7 @@
 				<th>Name</th>
 				<th>Role</th>
                 <th>Email</th>
+                <th>Update</th>
                 <th>Delete</th>
             </tr>
         </thead>
@@ -27,6 +28,11 @@
                 <td>@user.getName</td>	
 				<td>@user.getRole</td>
                 <td>@user.getEmail</td>
+                <td>
+					<a href="@routes.HomeController.updateUser(user.getId)" class="button-xs btn-danger">
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
+				</td>
                 <td>
                         <a href="@routes.HomeController.deleteUser(user.getId)" class="button-xs btn-danger" onclick="return confirmDel();">
                             <span class="glyphicon glyphicon-trash"></span>

@@ -79,6 +79,21 @@ public class HomeController extends Controller {
         
         }
 
+
+    public Result updateUser(Long id){
+        User u;
+        Form<User> newUserForm;
+    
+        try{
+            u = User.find.byId(id);
+            newUserForm = formFactory.form(User.class).fill(u);
+        } catch (Exception ex){
+            return badRequest("error");
+        }
+
+        return ok(addUser.render(newUserForm, User.getUserById(session().get("email"))));
+    }
+
         public Result deleteUser(Long id){
             User.find.ref(id).delete();
             flash("success", "User has been deleted.");

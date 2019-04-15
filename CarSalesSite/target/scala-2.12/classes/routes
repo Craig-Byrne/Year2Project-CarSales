@@ -45,6 +45,8 @@ GET     /addUser                          controllers.HomeController.addUser
 
 POST    /addUserSubmit                controllers.HomeController.addUserSubmit
 
+GET     /updateUser/:id               controllers.HomeController.updateUser(id: Long)
+
 GET     /deleteUser/:id               controllers.HomeController.deleteUser(id: Long)
 
 GET     /reviews                     controllers.HomeController.reviews

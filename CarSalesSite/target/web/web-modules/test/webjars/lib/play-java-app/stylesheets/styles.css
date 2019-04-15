@@ -1,0 +1,45 @@
+.footer { 
+    font-weight: bold; 
+    color: #FF0000;
+    text-align: center;
+    background-color: #085CD9;
+}
+
+.sidecol { 
+    font-weight: bold;
+    background-color: #CDB99C; 
+}
+
+.sidecol h2 { 
+    font-weight: bold;
+    text-align: center;
+    color: #3399CC; 
+}
+
+.midcol h1{
+    text-align: center;
+    color: #3399CC;
+    font-style: italic;
+}
+
+.midcol p{
+    text-align: center;
+}
+
+.midcol h3{
+    text-align: center;
+}
+
+ul.nav active { color: #FF0000 !important; }
+
+.navbar{
+    background-color: #085CD9;  
+}
+
+ul.nav a{
+    color: #FF0000;
+}
+
+body{
+    background-color: #FFFFFF;
+}

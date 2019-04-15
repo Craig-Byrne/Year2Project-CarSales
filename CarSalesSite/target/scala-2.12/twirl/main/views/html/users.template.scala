@@ -49,26 +49,32 @@ Seq[Any](format.raw/*4.1*/("""
 				<th>Name</th>
 				<th>Role</th>
                 <th>Email</th>
+                <th>Update</th>
                 <th>Delete</th>
             </tr>
         </thead>
         
-        """),_display_(/*25.10*/for(user <- userList) yield /*25.31*/ {_display_(Seq[Any](format.raw/*25.33*/("""
-            """),format.raw/*26.13*/("""<tr scope="row">
-                <td>"""),_display_(/*27.22*/user/*27.26*/.getName),format.raw/*27.34*/("""</td>	
-				<td>"""),_display_(/*28.10*/user/*28.14*/.getRole),format.raw/*28.22*/("""</td>
-                <td>"""),_display_(/*29.22*/user/*29.26*/.getEmail),format.raw/*29.35*/("""</td>
+        """),_display_(/*26.10*/for(user <- userList) yield /*26.31*/ {_display_(Seq[Any](format.raw/*26.33*/("""
+            """),format.raw/*27.13*/("""<tr scope="row">
+                <td>"""),_display_(/*28.22*/user/*28.26*/.getName),format.raw/*28.34*/("""</td>	
+				<td>"""),_display_(/*29.10*/user/*29.14*/.getRole),format.raw/*29.22*/("""</td>
+                <td>"""),_display_(/*30.22*/user/*30.26*/.getEmail),format.raw/*30.35*/("""</td>
                 <td>
-                        <a href=""""),_display_(/*31.35*/routes/*31.41*/.HomeController.deleteUser(user.getId)),format.raw/*31.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
+					<a href=""""),_display_(/*32.16*/routes/*32.22*/.HomeController.updateUser(user.getId)),format.raw/*32.60*/("""" class="button-xs btn-danger">
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
+				</td>
+                <td>
+                        <a href=""""),_display_(/*37.35*/routes/*37.41*/.HomeController.deleteUser(user.getId)),format.raw/*37.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
                             <span class="glyphicon glyphicon-trash"></span>
                         </a>
                     </td>
             </tr>
-        """)))}),format.raw/*36.10*/("""
-    """),format.raw/*37.5*/("""</tbody>
+        """)))}),format.raw/*42.10*/("""
+    """),format.raw/*43.5*/("""</tbody>
 </table>
 <p>
-    <a href=""""),_display_(/*40.15*/routes/*40.21*/.HomeController.addUser()),format.raw/*40.46*/("""">
+    <a href=""""),_display_(/*46.15*/routes/*46.21*/.HomeController.addUser()),format.raw/*46.46*/("""">
         <button class="btn btn-primary">Add a user</button>
     </a>
 </p>
@@ -88,11 +94,11 @@ Seq[Any](format.raw/*4.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 29 00:24:26 GMT 2019
+                  DATE: Mon Apr 15 12:19:49 IST 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/users.scala.html
-                  HASH: 2aa2f23c84315c527b531a65e38b02b12252585d
-                  MATRIX: 651->1|683->27|1058->56|1226->131|1253->133|1280->152|1318->153|1346->155|1389->173|1429->205|1467->206|1496->209|1560->247|1574->252|1610->267|1640->270|1679->279|1709->282|1983->529|2020->550|2060->552|2101->565|2166->603|2179->607|2208->615|2251->631|2264->635|2293->643|2347->670|2360->674|2390->683|2478->744|2493->750|2552->788|2804->1009|2836->1014|2899->1050|2914->1056|2960->1081
-                  LINES: 24->1|25->2|30->3|35->4|36->5|36->5|36->5|37->6|39->8|39->8|39->8|40->9|41->10|41->10|41->10|42->11|43->12|45->14|56->25|56->25|56->25|57->26|58->27|58->27|58->27|59->28|59->28|59->28|60->29|60->29|60->29|62->31|62->31|62->31|67->36|68->37|71->40|71->40|71->40
+                  HASH: c4cd0ea83eb077bd6e1bb8687fbb02ac30eebc91
+                  MATRIX: 651->1|683->27|1058->56|1226->131|1253->133|1280->152|1318->153|1346->155|1389->173|1429->205|1467->206|1496->209|1560->247|1574->252|1610->267|1640->270|1679->279|1709->282|2015->561|2052->582|2092->584|2133->597|2198->635|2211->639|2240->647|2283->663|2296->667|2325->675|2379->702|2392->706|2422->715|2491->757|2506->763|2565->801|2754->963|2769->969|2828->1007|3080->1228|3112->1233|3175->1269|3190->1275|3236->1300
+                  LINES: 24->1|25->2|30->3|35->4|36->5|36->5|36->5|37->6|39->8|39->8|39->8|40->9|41->10|41->10|41->10|42->11|43->12|45->14|57->26|57->26|57->26|58->27|59->28|59->28|59->28|60->29|60->29|60->29|61->30|61->30|61->30|63->32|63->32|63->32|68->37|68->37|68->37|73->42|74->43|77->46|77->46|77->46
                   -- GENERATED --
               */
           

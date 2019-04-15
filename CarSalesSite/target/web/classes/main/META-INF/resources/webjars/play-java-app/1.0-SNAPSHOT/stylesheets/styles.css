@@ -1,27 +1,57 @@
 .footer { 
     font-weight: bold; 
-    color: blue;
+    color: #E3E3E3;
     text-align: center;
+    background-color: #C60021;
 }
 
 .sidecol { 
     font-weight: bold;
-    background-color: steelblue; 
+    background-color: #F6F6F8; 
 }
 
 .sidecol h2 { 
-    font-weight: bold; 
+    font-weight: bold;
+    text-align: center;
+    color: #C60021; 
 }
 
 .midcol h1{
     text-align: center;
-}
-
-.navbar{
-    color: blue;
+    color: #C60021;
+    font-style: italic;
 }
 
 .midcol p{
     text-align: center;
 }
 
+.midcol h3{
+    text-align: center;
+}
+
+ul.nav active { color: #C60021 !important; }
+
+.navbar{
+    background-color: #C60021;  
+}
+
+ul.nav a{
+    color: #000000;
+}
+
+body{
+    background-color: #E3E3E3;
+}
+
+.btn-primary{
+    background-color: #C60021;
+}
+
+.btn-warning{
+    background-color: #E3E3E3;
+}
+
+.th{
+    background-color: #C60021;
+}

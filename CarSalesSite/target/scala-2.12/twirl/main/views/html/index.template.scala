@@ -44,7 +44,24 @@ Seq[Any](format.raw/*1.27*/("""
 				<p>New models being added to the website soon, stay tuned!!</p>
 				</div>
 			</div>
-""")))}),format.raw/*15.2*/(""" 
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="midcol">
+				</div>
+			</div>
+
+			<div class="row">
+					<div class="col-sm-4">
+						<div class="well sidecol">
+						<h2>What we garuntee</h2>
+						<h4>- Car is fully valeted</h4>
+						<h4>- A 3 month garuntee</h4>
+						<h4>- An NCT garuntee</h4>
+						<h4>- That we will not be beaten in prices</h4>
+					</div>
+			</div>
+""")))}),format.raw/*32.2*/(""" 
 
 
 """))
@@ -63,11 +80,11 @@ Seq[Any](format.raw/*1.27*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 31 12:39:39 IST 2019
+                  DATE: Sun Apr 07 00:34:10 IST 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/index.scala.html
-                  HASH: e1cacb450c93977f31844093fb999e6b1f36da3e
-                  MATRIX: 959->1|1079->26|1107->29|1133->47|1171->48|1200->51|1613->434
-                  LINES: 28->1|33->1|34->2|34->2|34->2|35->3|47->15
+                  HASH: 64503a780b04a24c0d1d08bdaba12411b662be60
+                  MATRIX: 959->1|1079->26|1107->29|1133->47|1171->48|1200->51|2024->845
+                  LINES: 28->1|33->1|34->2|34->2|34->2|35->3|64->32
                   -- GENERATED --
               */
           

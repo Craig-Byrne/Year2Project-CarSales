@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2Project-CarSales/CarSalesSite/conf/routes
-// @DATE:Fri Mar 29 13:14:55 GMT 2019
+// @DATE:Mon Apr 15 12:18:25 IST 2019
 
 import play.api.mvc.Call
 
@@ -11,14 +11,14 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:59
+  // @LINE:61
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:59
+    // @LINE:61
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
@@ -78,6 +78,12 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "admin")
     }
   
+    // @LINE:48
+    def updateUser(id:Long): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "updateUser/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
+    }
+  
     // @LINE:30
     def inquirySubmit(): Call = {
       
@@ -96,13 +102,13 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "products")
     }
   
-    // @LINE:48
+    // @LINE:50
     def deleteUser(id:Long): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "deleteUser/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
-    // @LINE:56
+    // @LINE:58
     def deleteReview(id:Long): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "deleteReview/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
@@ -150,13 +156,13 @@ package controllers {
       Call("POST", _prefix + { _defaultPrefix } + "registerSubmit")
     }
   
-    // @LINE:50
+    // @LINE:52
     def reviews(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "reviews")
     }
   
-    // @LINE:54
+    // @LINE:56
     def addReviewSubmit(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "addReviewSubmit")
@@ -168,7 +174,7 @@ package controllers {
       Call("GET", _prefix)
     }
   
-    // @LINE:52
+    // @LINE:54
     def addReview(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "addReview")
