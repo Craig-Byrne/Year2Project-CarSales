@@ -1,7 +1,7 @@
 @(inquiryForm: Form[models.Inquiries], user: models.users.User)
 @import helper._
 
-@main("Contact us", user){
+@main("Contact Us", user){
 	<h1>Contact us</h1>
 
 	@form(action=routes.HomeController.inquirySubmit(), 'class -> "form-horizontal", 'role -> "form",

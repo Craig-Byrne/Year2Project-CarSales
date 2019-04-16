@@ -33,7 +33,16 @@
 ul.nav active { color: #C60021 !important; }
 
 .navbar{
+    color: #000000;
     background-color: #C60021;  
+}
+
+.nav.navbar-nav{
+    color: #000000;
+}
+
+.nav.navbar-nav li a {
+    color: #000000;
 }
 
 ul.nav a{
@@ -46,12 +55,33 @@ body{
 
 .btn-primary{
     background-color: #C60021;
+    border-color: #C60021;
+}
+
+.btn-primary:hover{
+    background-color: #000000;
+    color: #C60021;
 }
 
 .btn-warning{
-    background-color: #E3E3E3;
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.btn-warning:hover{
+    background-color: #C60021;
+    color: #000000;
 }
 
 .th{
     background-color: #C60021;
+}
+
+.navbar-inverse .navbar-brand{
+    color: #000000;
+}
+
+thead th {
+    background-color: #C60021;
+    color: white;
 }

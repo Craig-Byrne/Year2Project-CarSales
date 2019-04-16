@@ -33,7 +33,7 @@ object contactUs extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.
 
 Seq[Any](format.raw/*1.64*/("""
 """),format.raw/*3.1*/("""
-"""),_display_(/*4.2*/main("Contact us", user)/*4.26*/{_display_(Seq[Any](format.raw/*4.27*/("""
+"""),_display_(/*4.2*/main("Contact Us", user)/*4.26*/{_display_(Seq[Any](format.raw/*4.27*/("""
 	"""),format.raw/*5.2*/("""<h1>Contact us</h1>
 
 	"""),_display_(/*7.3*/form(action=routes.HomeController.inquirySubmit(), 'class -> "form-horizontal", 'role -> "form",
@@ -75,9 +75,9 @@ Seq[Any](format.raw/*1.64*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 24 19:23:12 GMT 2019
+                  DATE: Tue Apr 16 13:24:15 IST 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/contactUs.scala.html
-                  HASH: e016cf5583cecd689335b2f0f7b3ae4a7a40c7e7
+                  HASH: d18663b302a82de5798f3b6b678fe73750245ff2
                   MATRIX: 986->1|1121->66|1166->63|1194->83|1222->86|1254->110|1292->111|1321->114|1371->139|1540->300|1579->302|1613->310|1625->314|1656->324|1688->330|1793->414|1823->418|1929->503|1959->507|2070->597|2100->601|2230->709|2262->715|2347->779|2379->784|2510->888|2525->894|2573->921|2691->1009|2724->1012
                   LINES: 28->1|31->2|34->1|35->3|36->4|36->4|36->4|37->5|39->7|40->8|40->8|42->10|42->10|42->10|44->12|44->12|45->13|45->13|46->14|46->14|47->15|47->15|49->17|49->17|51->19|53->21|53->21|53->21|57->25|58->26
                   -- GENERATED --

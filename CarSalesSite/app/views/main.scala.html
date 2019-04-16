@@ -19,7 +19,7 @@
 		<ul class="nav navbar-nav">
 		    <li @if(title == "Home"){class="active"}><a href="@routes.HomeController.index()">Home</a></li>
 		    <li @if(title == "Products"){class="active"}><a href="@routes.HomeController.products()">Cars on Sale</a></li>
-		    <li @if(title == "contactUs"){class="active"}><a href="@routes.HomeController.contactUs()">Contact us</a></li>
+		    <li @if(title == "Contact Us"){class="active"}><a href="@routes.HomeController.contactUs()">Contact us</a></li>
 			<li @if(title == "Log in"){class="active"}>
 				@if(user != null) {
 					<a href="@routes.LoginController.logout()">Log Out</a>
@@ -27,7 +27,7 @@
 					<a href="@routes.LoginController.login()">Log In</a>
 				}
 			</li>
-			<li @if(title == "admin"){class="active"}><a href="@routes.HomeController.admin()">Admin</a></li>
+			<li @if(title == "Admin"){class="active"}><a href="@routes.HomeController.admin()">Admin</a></li>
 			<li @if(title == "Reviews"){class="active"}><a href="@routes.HomeController.reviews()">Reviews</a></li>
 		</ul>
 		</div>

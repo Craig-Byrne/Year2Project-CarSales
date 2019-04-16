@@ -1,8 +1,8 @@
 @(loginForm: Form[models.users.Login], user: models.users.User)
 @import helper._
 
-@main("Login", user) {
-    <h3>Sign in</h3>
+@main("Log in", user) {
+    <h1>Sign in</h1>
     @if(loginForm.hasGlobalErrors) {
         <p class="alert alert-warning">
             @for(e <- loginForm.globalErrors) {
