@@ -1,24 +1,24 @@
 .footer { 
     font-weight: bold; 
-    color: #FF0000;
+    color: #E3E3E3;
     text-align: center;
-    background-color: #085CD9;
+    background-color: #C60021;
 }
 
 .sidecol { 
     font-weight: bold;
-    background-color: #CDB99C; 
+    background-color: #F6F6F8; 
 }
 
 .sidecol h2 { 
     font-weight: bold;
     text-align: center;
-    color: #3399CC; 
+    color: #C60021; 
 }
 
 .midcol h1{
     text-align: center;
-    color: #3399CC;
+    color: #C60021;
     font-style: italic;
 }
 
@@ -30,16 +30,66 @@
     text-align: center;
 }
 
-ul.nav active { color: #FF0000 !important; }
+.midcol h2{
+    text-align: center;
+}
+
+ul.nav active { color: #C60021 !important; }
 
 .navbar{
-    background-color: #085CD9;  
+    color: #000000;
+    background-color: #C60021;  
+}
+
+.nav.navbar-nav{
+    color: #000000;
+}
+
+.nav.navbar-nav li a {
+    color: #000000;
 }
 
 ul.nav a{
-    color: #FF0000;
+    color: #000000;
 }
 
 body{
-    background-color: #FFFFFF;
+    background-color: #E3E3E3;
+}
+
+.btn-primary{
+    background-color: #C60021;
+    border-color: #C60021;
+}
+
+.btn-primary:hover{
+    background-color: #000000;
+    color: #C60021;
+}
+
+.btn-warning{
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.btn-warning:hover{
+    background-color: #C60021;
+    color: #000000;
+}
+
+.th{
+    background-color: #C60021;
+}
+
+.navbar-inverse .navbar-brand{
+    color: #000000;
+}
+
+thead th {
+    background-color: #C60021;
+    color: white;
+}
+
+.carousel-caption h7{
+    text-align: center
 }

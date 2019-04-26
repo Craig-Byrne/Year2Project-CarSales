@@ -181,6 +181,7 @@ public class HomeController extends Controller {
         return ok(contactUs.render(inquiryForm, User.getUserById(session().get("email")))); 
     }
 
+    @With(AuthCustomer.class)
     public Result inquirySubmit(){
         Form<Inquiries> newInquiryForm = formFactory.form(Inquiries.class).bindFromRequest();
 
@@ -200,11 +201,13 @@ public class HomeController extends Controller {
         }
     }
 
+    @With(AuthCustomer.class)
     public Result addReview(){
             Form<Reviews> reviewForm = formFactory.form(Reviews.class);
         return ok(addReview.render(reviewForm, User.getUserById(session().get("email")))); 
     }  
 
+    @With(AuthCustomer.class)
     public Result addReviewSubmit(){
         Form<Reviews> newReviewForm = formFactory.form(Reviews.class).bindFromRequest();
 

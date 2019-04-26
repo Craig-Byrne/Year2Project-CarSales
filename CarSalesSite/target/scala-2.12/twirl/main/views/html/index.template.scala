@@ -48,6 +48,45 @@ Seq[Any](format.raw/*1.27*/("""
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="midcol">
+					<h2>Some of our current stock</h2>
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+					 
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src=""""),_display_(/*31.20*/routes/*31.26*/.Assets.versioned("images/1.jpeg")),format.raw/*31.60*/("""" alt="First slide">
+								<div class="carousel-caption">
+									<h7>Volkswagen Polo 2012</h7>
+								</div>
+							</div>
+							<div class="item">
+								<img src=""""),_display_(/*37.20*/routes/*37.26*/.Assets.versioned("images/2.jpeg")),format.raw/*37.60*/("""" alt="second slide">
+								<div class="carousel-caption">
+									<h7>Opel Corsa 2010</h7>
+								</div>
+							</div>
+							<div class="item">
+								<img src=""""),_display_(/*43.20*/routes/*43.26*/.Assets.versioned("images/3.jpeg")),format.raw/*43.60*/("""" alt="Third slide">
+								<div class="carousel-caption">
+									<h7>Renault Clio 2014</h7>
+								</div>
+							</div>
+						</div>
+					 
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div> <!-- Carousel -->
 				</div>
 			</div>
 
@@ -61,9 +100,14 @@ Seq[Any](format.raw/*1.27*/("""
 						<h4>- That we will not be beaten in prices</h4>
 					</div>
 			</div>
-""")))}),format.raw/*32.2*/(""" 
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	$('.carousel').carousel("""),format.raw/*74.26*/("""{"""),format.raw/*74.27*/("""
+		"""),format.raw/*75.3*/("""interval: 3000
+	"""),format.raw/*76.2*/("""}"""),format.raw/*76.3*/(""")
+</script>
+""")))}),format.raw/*78.2*/(""" 
 """))
       }
     }
@@ -80,11 +124,11 @@ Seq[Any](format.raw/*1.27*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Apr 07 00:34:10 IST 2019
+                  DATE: Tue Apr 23 12:31:41 IST 2019
                   SOURCE: /home/wdd/Year2Project-CarSales/CarSalesSite/app/views/index.scala.html
-                  HASH: 64503a780b04a24c0d1d08bdaba12411b662be60
-                  MATRIX: 959->1|1079->26|1107->29|1133->47|1171->48|1200->51|2024->845
-                  LINES: 28->1|33->1|34->2|34->2|34->2|35->3|64->32
+                  HASH: 773ddfa7b78e74d1cd53769d64424ede32136ec3
+                  MATRIX: 959->1|1079->26|1107->29|1133->47|1171->48|1200->51|2270->1094|2285->1100|2340->1134|2546->1313|2561->1319|2616->1353|2818->1528|2833->1534|2888->1568|3991->2643|4020->2644|4051->2648|4095->2665|4123->2666|4168->2681
+                  LINES: 28->1|33->1|34->2|34->2|34->2|35->3|63->31|63->31|63->31|69->37|69->37|69->37|75->43|75->43|75->43|106->74|106->74|107->75|108->76|108->76|110->78
                   -- GENERATED --
               */
           
