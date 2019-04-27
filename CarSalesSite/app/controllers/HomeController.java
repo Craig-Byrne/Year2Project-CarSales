@@ -223,7 +223,7 @@ public class HomeController extends Controller {
 
         newReview.save();
         flash("Success", "Review " + newReview.getFullName() + " was added ");
-        return redirect(controllers.routes.HomeController.addReview());
+        return redirect(controllers.routes.HomeController.reviews());
     }
 }
 
