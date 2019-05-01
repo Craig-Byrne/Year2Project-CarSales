@@ -3,7 +3,7 @@
 @import helper._
 
 @main("Add User", user){
-    <p class="lead">Add a new user</p>
+    <h3 class="lead">Add a new user</h3>
 
     @form(action=routes.HomeController.addUserSubmit(), 'class -> "form-horizontal", 'role -> "form",
           'method -> "POST", 'enctype -> "multipart/form-data") {
